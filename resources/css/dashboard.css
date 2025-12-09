@@ -1,0 +1,1437 @@
+/* ==================== SPOTIFY-INSPIRED ULTRA PRO THEME ==================== */
+/* Modern, Fluid, Professional Design with Smooth Animations */
+
+.root {
+    -fx-background-color: #000000;
+    -fx-font-family: 'Segoe UI', 'Circular Std', 'Helvetica Neue', 'Arial', sans-serif;
+    -fx-font-smoothing-type: lcd;
+}
+
+/* ==================== SIDEBAR ULTRA PRO ==================== */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #000000 0%, #0a0a0a 100%);
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0, 5, 0);
+}
+
+.sidebar-logo {
+    -fx-padding: 8 12 20 12;
+    -fx-cursor: hand;
+}
+
+.sidebar-logo:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.sidebar-logo-text {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 17px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.4), 10, 0, 0, 0);
+}
+
+.sidebar-separator {
+    -fx-background-color: linear-gradient(to right, transparent, #282828, transparent);
+    -fx-pref-height: 1;
+    -fx-opacity: 0.5;
+}
+
+.sidebar-section-title {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-letter-spacing: 1.5px;
+    -fx-padding: 12 0 6 16;
+    -fx-opacity: 0.8;
+}
+
+/* ==================== SIDEBAR NAVIGATION ULTRA SMOOTH ==================== */
+.sidebar-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 16;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-text-fill: #FFFFFF;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.1), 8, 0, 0, 0);
+}
+
+.sidebar-item-active {
+    -fx-background-color: linear-gradient(90deg, rgba(29, 185, 84, 0.2), rgba(29, 185, 84, 0.05));
+    -fx-text-fill: #1DB954;
+    -fx-font-weight: 700;
+    -fx-border-color: #1DB954;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-insets: 0 0 0 -12;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.3), 12, 0, 0, 0);
+}
+
+.sidebar-item-active:hover {
+    -fx-background-color: linear-gradient(90deg, rgba(29, 185, 84, 0.25), rgba(29, 185, 84, 0.08));
+}
+
+/* ==================== PROFILE SECTION ULTRA ==================== */
+.sidebar-profile {
+    -fx-background-color: linear-gradient(135deg, #181818 0%, #1a1a1a 100%);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 2);
+}
+
+.sidebar-profile:hover {
+    -fx-background-color: linear-gradient(135deg, #222222 0%, #252525 100%);
+    -fx-border-color: rgba(29, 185, 84, 0.3);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.2), 12, 0, 0, 2);
+}
+
+.profile-avatar {
+    -fx-background-color: linear-gradient(135deg, #1DB954 0%, #1ED760 100%);
+    -fx-background-radius: 50%;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.4), 8, 0, 0, 0);
+}
+
+.profile-name {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.profile-role {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 12px;
+    -fx-opacity: 0.9;
+}
+
+.profile-menu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 18px;
+    -fx-background-radius: 50%;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-cursor: hand;
+}
+
+.profile-menu-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: #FFFFFF;
+    -fx-scale-x: 1.15;
+    -fx-scale-y: 1.15;
+    -fx-rotate: 90;
+}
+
+/* ==================== TOP NAVIGATION ULTRA ==================== */
+.top-nav {
+    -fx-background-color: linear-gradient(to bottom, rgba(18, 18, 18, 0.95), rgba(18, 18, 18, 0.98));
+    -fx-padding: 16 32;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2);
+    -fx-backdrop-filter: blur(20px);
+}
+
+.nav-button {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 50%;
+    -fx-min-width: 36;
+    -fx-min-height: 36;
+    -fx-max-width: 36;
+    -fx-max-height: 36;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0, 0, 2);
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(40, 40, 40, 0.9);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0, 0, 0);
+}
+
+.nav-button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* ==================== SEARCH ULTRA PRO ==================== */
+.search-container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 500px;
+    -fx-padding: 10 20;
+    -fx-max-width: 420;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 12, 0, 0, 3);
+}
+
+.search-container:hover {
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.3), 16, 0, 0, 3);
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+}
+
+.search-input {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #727272;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0 0 0 12;
+}
+
+.search-input:focused {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: none;
+}
+
+/* ==================== ICON BUTTONS ULTRA ==================== */
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-background-radius: 50%;
+    -fx-min-width: 36;
+    -fx-min-height: 36;
+    -fx-cursor: hand;
+    -fx-font-size: 20px;
+}
+
+.icon-button:hover {
+    -fx-background-color: rgba(40, 40, 40, 0.8);
+    -fx-text-fill: #FFFFFF;
+    -fx-scale-x: 1.12;
+    -fx-scale-y: 1.12;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0, 0, 0);
+}
+
+.icon-button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.icon-button-logout {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-background-radius: 50%;
+    -fx-min-width: 36;
+    -fx-min-height: 36;
+    -fx-cursor: hand;
+    -fx-font-size: 20px;
+}
+
+.icon-button-logout:hover {
+    -fx-background-color: rgba(226, 33, 52, 0.15);
+    -fx-text-fill: #E22134;
+    -fx-scale-x: 1.12;
+    -fx-scale-y: 1.12;
+    -fx-effect: dropshadow(gaussian, rgba(226, 33, 52, 0.4), 12, 0, 0, 0);
+}
+
+.icon-button-logout:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* ==================== MAIN CONTENT ULTRA ==================== */
+.main-content {
+    -fx-background-color: linear-gradient(to bottom, #121212 0%, #0a0a0a 100%);
+}
+
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.content-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.dashboard-content {
+    -fx-background-color: transparent;
+}
+
+/* ==================== GREETING ULTRA ==================== */
+.greeting-text {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 36px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0, 0, 3);
+}
+
+.section-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2);
+}
+
+.show-all-link {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-underline: false;
+    -fx-cursor: hand;
+}
+
+.show-all-link:hover {
+    -fx-text-fill: #FFFFFF;
+    -fx-underline: true;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* ==================== QUICK ACCESS ULTRA ==================== */
+.quick-access-card {
+    -fx-background-color: linear-gradient(135deg, #1f1f1f 0%, #181818 100%);
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0, 0, 4);
+    -fx-border-color: rgba(255, 255, 255, 0.05);
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+}
+
+.quick-access-card:hover {
+    -fx-background-color: linear-gradient(135deg, #2a2a2a 0%, #222222 100%);
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.4), 20, 0, 0, 6);
+    -fx-border-color: rgba(29, 185, 84, 0.3);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.quick-access-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+}
+
+/* ==================== BOOK CARDS ULTRA ==================== */
+.book-card {
+    -fx-background-color: #181818;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 4);
+    -fx-border-color: rgba(255, 255, 255, 0.03);
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+}
+
+.book-card:hover {
+    -fx-background-color: #242424;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0, 0, 8);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-translate-y: -4;
+}
+
+.book-card-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.book-card-author {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+
+.play-button {
+    -fx-background-color: #1DB954;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 50%;
+    -fx-min-width: 48;
+    -fx-min-height: 48;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0, 0, 4);
+}
+
+.play-button:hover {
+    -fx-background-color: #1ED760;
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.6), 18, 0, 0, 6);
+}
+
+.play-button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* ==================== HORIZONTAL SCROLL ULTRA ==================== */
+.horizontal-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.horizontal-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.card-container {
+    -fx-padding: 0;
+}
+
+.categories-grid {
+    -fx-hgap: 16;
+    -fx-vgap: 16;
+}
+
+/* ==================== BOTTOM PLAYER BAR ULTRA ==================== */
+.bottom-player-bar {
+    -fx-background-color: linear-gradient(to top, #181818 0%, #1a1a1a 100%);
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 14 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0, 0, -4);
+}
+
+.mini-cover {
+    -fx-background-color: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    -fx-background-radius: 6;
+    -fx-min-width: 56;
+    -fx-min-height: 56;
+    -fx-max-width: 56;
+    -fx-max-height: 56;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 2);
+}
+
+.current-book-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+}
+
+.current-book-author {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 11px;
+    -fx-font-weight: 500;
+}
+
+.mini-action-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 16px;
+    -fx-background-radius: 50%;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-cursor: hand;
+}
+
+.mini-action-btn:hover {
+    -fx-text-fill: #1DB954;
+    -fx-scale-x: 1.15;
+    -fx-scale-y: 1.15;
+}
+
+.stat-number {
+    -fx-text-fill: #1DB954;
+    -fx-font-size: 18px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.3), 8, 0, 0, 0);
+}
+
+.stat-label {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 10px;
+    -fx-font-weight: 600;
+    -fx-letter-spacing: 0.5px;
+}
+
+.volume-slider {
+    -fx-background-color: transparent;
+}
+
+.volume-slider .track {
+    -fx-background-color: #535353;
+    -fx-background-radius: 2;
+    -fx-pref-height: 4;
+}
+
+.volume-slider .thumb {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 12;
+    -fx-pref-height: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0, 0, 0);
+}
+
+.volume-slider:hover .thumb {
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+    -fx-background-color: #1DB954;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.5), 10, 0, 0, 0);
+}
+
+.volume-slider .thumb:pressed {
+    -fx-background-color: #1DB954;
+}
+
+/* ==================== SCROLLBARS ULTRA ==================== */
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 6;
+    -fx-min-width: 10;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: rgba(29, 185, 84, 0.6);
+}
+
+.scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 6;
+    -fx-min-height: 10;
+}
+
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}
+
+/* ==================== CONTEXT MENU ULTRA ==================== */
+.context-menu {
+    -fx-background-color: #282828;
+    -fx-background-radius: 6;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 20, 0, 0, 8);
+}
+
+.context-menu .menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 12 20;
+    -fx-font-weight: 600;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.context-menu .menu-item:focused {
+    -fx-background-color: rgba(29, 185, 84, 0.2);
+}
+
+/* ==================== TOOLTIPS ULTRA ==================== */
+.tooltip {
+    -fx-background-color: #282828;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 6;
+    -fx-padding: 8 14;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 12, 0, 0, 4);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+}
+
+/* ==================== ALERTS ULTRA ==================== */
+.alert {
+    -fx-background-color: #1f1f1f;
+}
+
+.alert .header-panel {
+    -fx-background-color: linear-gradient(135deg, #1DB954, #1ED760);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2);
+}
+
+.alert .header-panel .label {
+    -fx-text-fill: #000000;
+    -fx-font-weight: 800;
+    -fx-font-size: 16px;
+}
+
+.alert .content {
+    -fx-background-color: #1f1f1f;
+    -fx-padding: 24;
+}
+
+.alert .content .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+.alert .button {
+    -fx-background-color: #1DB954;
+    -fx-text-fill: #000000;
+    -fx-font-weight: 700;
+    -fx-background-radius: 500px;
+    -fx-padding: 12 32;
+    -fx-cursor: hand;
+}
+
+.alert .button:hover {
+    -fx-background-color: #1ED760;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.alert .button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* ==================== LOADING INDICATOR ULTRA ==================== */
+.loading-indicator {
+    -fx-progress-color: #1DB954;
+}
+
+.loading-indicator .spinner {
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.5), 12, 0, 0, 0);
+}
+
+/* ==================== BADGE ULTRA ==================== */
+.badge {
+    -fx-background-color: linear-gradient(135deg, #1DB954, #1ED760);
+    -fx-text-fill: #000000;
+    -fx-background-radius: 500px;
+    -fx-padding: 3 10;
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.4), 8, 0, 0, 0);
+}
+
+/* ==================== EMPTY STATE ULTRA ==================== */
+.empty-state {
+    -fx-text-fill: #535353;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER;
+    -fx-padding: 48;
+    -fx-opacity: 0.7;
+}
+
+/* ==================== PREMIUM GRADIENT ULTRA ==================== */
+.premium-gradient {
+    -fx-background-color: linear-gradient(135deg, #1DB954 0%, #1ED760 50%, #1DB954 100%);
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.5), 15, 0, 0, 4);
+}
+
+/* ==================== GLASS MORPHISM EFFECT ==================== */
+.glass-effect {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-backdrop-filter: blur(20px);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+}
+
+/* ==================== CARD HOVER GLOW ==================== */
+.card-glow:hover {
+    -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.6), 25, 0, 0, 0);
+}
+
+/* ==================== QUICK ACCESS GRID ==================== */
+.quick-access-grid {
+    -fx-hgap: 16;
+    -fx-vgap: 16;
+}
+
+/* ==================== RESPONSIVE ANIMATIONS ==================== */
+@keyframes fadeInUp {
+    from {
+        -fx-opacity: 0;
+        -fx-translate-y: 30;
+    }
+    to {
+        -fx-opacity: 1;
+        -fx-translate-y: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        -fx-opacity: 0;
+        -fx-translate-x: -30;
+    }
+    to {
+        -fx-opacity: 1;
+        -fx-translate-x: 0;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        -fx-scale-x: 0.9;
+        -fx-scale-y: 0.9;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+        -fx-opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+    50% {
+        -fx-scale-x: 1.03;
+        -fx-scale-y: 1.03;
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.3), 10, 0, 0, 0);
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.6), 20, 0, 0, 0);
+    }
+}
+
+/* ==================== SHIMMER EFFECT ==================== */
+@keyframes shimmer {
+    0% {
+        -fx-background-position: -1000px 0;
+    }
+    100% {
+        -fx-background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    -fx-background-image: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    -fx-background-size: 1000px 100%;
+    -fx-background-position: -1000px 0;
+}
+
+/* ==================== FOCUS STYLES ==================== */
+.button:focused,
+.text-field:focused {
+    -fx-border-color: #1DB954;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+}
+
+/* ==================== SELECTION ==================== */
+::selection {
+    -fx-background-color: rgba(29, 185, 84, 0.3);
+}
+/* ═══════════════════════════════════════════════════════════════════
+   🎵 SPOTIFY-STYLE MODAL STYLES
+   ═══════════════════════════════════════════════════════════════════
+   Add these to your dashboard.css file
+*/
+
+/* Modal Overlay Background */
+.modal-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Main Modal Container */
+.spotify-modal {
+    -fx-background-color: #181818;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 40, 0, 0, 10);
+}
+
+/* Modal Header Section */
+.modal-header {
+    -fx-background-color: transparent;
+    -fx-padding: 40 40 30 40;
+}
+
+/* Book Cover Container */
+.modal-cover {
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 20, 0.3, 0, 8);
+}
+
+/* Category Badge */
+.category-badge {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-text-fill: #B3B3B3;
+    -fx-padding: 4 10;
+    -fx-background-radius: 4px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 1px;
+}
+
+/* Book Title */
+.modal-title {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-line-spacing: -5px;
+}
+
+/* Author Name */
+.modal-author {
+    -fx-font-size: 16px;
+    -fx-text-fill: #B3B3B3;
+    -fx-font-weight: 600;
+}
+
+/* Availability Dot */
+.status-dot {
+    -fx-background-radius: 50%;
+}
+
+.status-dot.available {
+    -fx-background-color: #1DB954;
+}
+
+.status-dot.borrowed {
+    -fx-background-color: #E74C3C;
+}
+
+/* Primary Action Button (Borrow) */
+.spotify-btn-primary {
+    -fx-background-color: #1DB954;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 32;
+    -fx-background-radius: 500px;
+    -fx-cursor: hand;
+}
+
+.spotify-btn-primary:hover {
+    -fx-background-color: #1ED760;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+
+/* Secondary Button (Details) */
+.spotify-btn-secondary {
+    -fx-background-color: transparent;
+    -fx-border-color: #535353;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 500px;
+    -fx-background-radius: 500px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+}
+
+.spotify-btn-secondary:hover {
+    -fx-border-color: white;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+
+/* Close Button */
+.spotify-btn-close {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-background-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-cursor: hand;
+}
+
+.spotify-btn-close:hover {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Tab Buttons */
+.spotify-tab {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: transparent;
+}
+
+.spotify-tab:hover {
+    -fx-text-fill: white;
+}
+
+.spotify-tab.active {
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+/* Content Area */
+.modal-content {
+    -fx-background-color: #121212;
+    -fx-background-radius: 0 0 12 12;
+    -fx-padding: 20 40 30 40;
+}
+
+/* Description Text */
+.modal-description {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 14px;
+    -fx-line-spacing: 4px;
+}
+
+/* Info Labels */
+.info-label {
+    -fx-text-fill: #535353;
+    -fx-font-size: 13px;
+}
+
+.info-value {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+/* Star Rating */
+.star-icon {
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+}
+
+.star-icon.filled {
+    -fx-text-fill: #1DB954;
+}
+
+.star-icon.empty {
+    -fx-text-fill: #535353;
+}
+
+.star-icon:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Stat Cards */
+.stat-card {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+}
+
+.stat-value {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.stat-label {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 12px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    -fx-pref-height: 8px;
+}
+
+.progress-bar > .track {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-background-radius: 4px;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: #1DB954;
+    -fx-background-radius: 4px;
+    -fx-background-insets: 0;
+}
+
+/* Metadata Row */
+.metadata-text {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 13px;
+}
+
+/* Animations */
+@keyframes modalEnter {
+    from {
+        -fx-opacity: 0;
+        -fx-scale-x: 0.9;
+        -fx-scale-y: 0.9;
+    }
+    to {
+        -fx-opacity: 1;
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+    }
+}
+
+@keyframes modalExit {
+    from {
+        -fx-opacity: 1;
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+    }
+    to {
+        -fx-opacity: 0;
+        -fx-scale-x: 0.95;
+        -fx-scale-y: 0.95;
+    }
+}
+
+/* Scrollbar Styling (Spotify-like) */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical > .track {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar:vertical > .thumb {
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar:vertical > .thumb:hover {
+    -fx-background-color: rgba(255,255,255,0.5);
+}
+
+/* Hover Effects */
+.hover-lift:hover {
+    -fx-translate-y: -2px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 12, 0, 0, 4);
+}
+
+.hover-glow:hover {
+    -fx-effect: dropshadow(gaussian, rgba(29,185,84,0.4), 16, 0, 0, 0);
+}
+/* ═══════════════════════════════════════════════════════════════════
+   👨‍🎨 SPOTIFY-STYLE AUTHOR CARDS & MODAL
+   ═══════════════════════════════════════════════════════════════════
+   Add these to your dashboard.css file
+*/
+
+/* ───────────────────────────────────────────────────────────────── */
+/* AUTHOR CARDS SECTION */
+/* ───────────────────────────────────────────────────────────────── */
+
+.dashboard-section {
+    -fx-background-color: transparent;
+}
+
+.section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.show-all-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.show-all-btn:hover {
+    -fx-text-fill: white;
+    -fx-underline: true;
+}
+
+.authors-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.authors-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.authors-scroll .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* AUTHOR CARD STYLING */
+/* ───────────────────────────────────────────────────────────────── */
+
+.author-card {
+    -fx-background-color: #181818;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 2);
+}
+
+.author-card:hover {
+    -fx-background-color: #282828;
+}
+
+/* Author Avatar Circle */
+.author-avatar {
+    -fx-background-radius: 50%;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 12, 0, 0, 4);
+}
+
+/* Author Avatar Gradients */
+.author-avatar-purple {
+    -fx-background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.author-avatar-pink {
+    -fx-background-color: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.author-avatar-blue {
+    -fx-background-color: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.author-avatar-green {
+    -fx-background-color: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.author-avatar-orange {
+    -fx-background-color: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Author Name */
+.author-name {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Book Count Label */
+.author-book-count {
+    -fx-font-size: 13px;
+    -fx-text-fill: #B3B3B3;
+}
+
+/* Author Badge */
+.author-badge {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-text-fill: #B3B3B3;
+    -fx-padding: 3 10;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* Play Button on Hover */
+.author-play-btn {
+    -fx-background-color: #1DB954;
+    -fx-text-fill: black;
+    -fx-background-radius: 50%;
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 12, 0, 0, 4);
+}
+
+.author-play-btn:hover {
+    -fx-background-color: #1ED760;
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* AUTHOR MODAL STYLING (Artist Page) */
+/* ───────────────────────────────────────────────────────────────── */
+
+.author-modal {
+    -fx-background-color: #121212;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 40, 0, 0, 10);
+}
+
+/* Modal Header with Gradient */
+.author-modal-header {
+    -fx-background-radius: 12px 12px 0 0;
+}
+
+.author-modal-header-gradient-purple {
+    -fx-background-color: linear-gradient(180deg, #667eea 0%, #121212 100%);
+}
+
+.author-modal-header-gradient-pink {
+    -fx-background-color: linear-gradient(180deg, #f093fb 0%, #121212 100%);
+}
+
+.author-modal-header-gradient-blue {
+    -fx-background-color: linear-gradient(180deg, #4facfe 0%, #121212 100%);
+}
+
+.author-modal-header-gradient-green {
+    -fx-background-color: linear-gradient(180deg, #43e97b 0%, #121212 100%);
+}
+
+.author-modal-header-gradient-orange {
+    -fx-background-color: linear-gradient(180deg, #fa709a 0%, #121212 100%);
+}
+
+/* Large Avatar in Modal */
+.author-avatar-large {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 50%;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 8);
+}
+
+/* Verified Badge */
+.author-verified {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-opacity: 0.9;
+}
+
+/* Author Name (Large) */
+.author-name-large {
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 12, 0, 0, 4);
+}
+
+/* Stats Label */
+.author-stats {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-opacity: 0.8;
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* BOOK ROWS IN AUTHOR MODAL (Like Spotify Song List) */
+/* ───────────────────────────────────────────────────────────────── */
+
+.book-row {
+    -fx-cursor: hand;
+    -fx-padding: 10 0;
+}
+
+.book-row:hover {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 4px;
+}
+
+/* Track Number */
+.book-row-number {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+}
+
+.book-row:hover .book-row-number {
+    -fx-text-fill: white;
+}
+
+/* Book Cover Thumbnail */
+.book-row-thumb {
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 2);
+}
+
+/* Book Title in Row */
+.book-row-title {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+}
+
+.book-row:hover .book-row-title {
+    -fx-underline: false;
+}
+
+/* Book Category in Row */
+.book-row-category {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 13px;
+}
+
+/* Availability Badge in Row */
+.book-row-badge-available {
+    -fx-background-color: rgba(29,185,84,0.15);
+    -fx-text-fill: #1DB954;
+    -fx-padding: 4 10;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.book-row-badge-borrowed {
+    -fx-background-color: rgba(231,76,60,0.15);
+    -fx-text-fill: #E74C3C;
+    -fx-padding: 4 10;
+    -fx-background-radius: 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* More Button in Row */
+.book-row-more {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-opacity: 0;
+}
+
+.book-row:hover .book-row-more {
+    -fx-opacity: 1;
+}
+
+.book-row-more:hover {
+    -fx-text-fill: white;
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* ACTION BUTTONS IN MODAL */
+/* ───────────────────────────────────────────────────────────────── */
+
+.author-follow-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 500px;
+    -fx-background-radius: 500px;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 28;
+    -fx-cursor: hand;
+}
+
+.author-follow-btn:hover {
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+    -fx-border-width: 2px;
+}
+
+/* Section Title in Modal */
+.author-section-title {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* SCROLL PANE IN MODAL */
+/* ───────────────────────────────────────────────────────────────── */
+
+.author-books-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.author-books-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.author-books-scroll .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.author-books-scroll .scroll-bar:vertical > .track {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 4px;
+}
+
+.author-books-scroll .scroll-bar:vertical > .thumb {
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 4px;
+}
+
+.author-books-scroll .scroll-bar:vertical > .thumb:hover {
+    -fx-background-color: rgba(255,255,255,0.5);
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* ANIMATIONS */
+/* ───────────────────────────────────────────────────────────────── */
+
+@keyframes authorCardEnter {
+    from {
+        -fx-opacity: 0;
+        -fx-translate-y: 20px;
+    }
+    to {
+        -fx-opacity: 1;
+        -fx-translate-y: 0;
+    }
+}
+
+@keyframes playButtonPop {
+    from {
+        -fx-scale-x: 0.7;
+        -fx-scale-y: 0.7;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+        -fx-opacity: 1;
+    }
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* RESPONSIVE ADJUSTMENTS */
+/* ───────────────────────────────────────────────────────────────── */
+
+.author-card {
+    -fx-min-width: 180px;
+    -fx-max-width: 180px;
+}
+
+.author-modal {
+    -fx-min-width: 720px;
+    -fx-max-width: 920px;
+}

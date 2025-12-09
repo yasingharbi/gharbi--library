@@ -1,0 +1,514 @@
+/* ==================== SPOTIFY THEME - EMPRUNT CSS ==================== */
+/* Inspired by Spotify's Dark Premium Design with Orange Accent */
+
+/* ==================== ROOT & GENERAL ==================== */
+.root {
+    -fx-background-color: #121212;
+    -fx-font-family: 'Segoe UI', 'Circular', 'Helvetica', 'Arial', sans-serif;
+}
+
+* {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* ==================== BUTTONS - SPOTIFY STYLE ==================== */
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: #b3b3b3;
+    -fx-border-width: 2;
+    -fx-border-radius: 500;
+    -fx-background-radius: 500;
+    -fx-padding: 10 28;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: white;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+
+.button:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-scale-x: 0.96;
+    -fx-scale-y: 0.96;
+}
+
+/* Orange Spotify Button (for Add/Primary actions) */
+.add-button {
+    -fx-background-color: #FF6F00;
+    -fx-text-fill: white;
+    -fx-font-weight: 900;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(255, 111, 0, 0.4), 12, 0, 0, 4);
+}
+
+.add-button:hover {
+    -fx-background-color: #FF8F00;
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+.add-button:pressed {
+    -fx-background-color: #E65100;
+}
+
+/* Circular Button */
+.button-circle {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-background-radius: 50%;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.button-circle:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* ==================== TABLE VIEW - SPOTIFY STYLE ==================== */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+/* Table Header */
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #282828;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 16 8;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 1px;
+}
+
+.table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Table Rows */
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #282828;
+    -fx-cursor: pointer;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #333333;
+}
+
+.table-view .table-row-cell:selected:hover {
+    -fx-background-color: #3E3E3E;
+}
+
+/* Table Cells */
+.table-view .table-cell {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 16 8;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+/* Empty Table Placeholder */
+.table-view .placeholder .label {
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 16px;
+}
+
+/* ==================== TEXT FIELD - SPOTIFY STYLE ==================== */
+.text-field {
+    -fx-background-color: #242424;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #b3b3b3;
+    -fx-font-size: 14px;
+    -fx-padding: 12 20;
+    -fx-border-width: 0;
+    -fx-background-radius: 4;
+}
+
+.text-field:focused {
+    -fx-background-color: #2A2A2A;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+}
+
+/* Search Field Special Style */
+.search-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #b3b3b3;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+/* ==================== COMBO BOX - SPOTIFY STYLE ==================== */
+.combo-box {
+    -fx-background-color: #242424;
+    -fx-border-width: 0;
+    -fx-background-radius: 4;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 10 15;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #282828;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: #FF6F00;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #282828;
+    -fx-border-color: #3E3E3E;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0, 0, 8);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #3E3E3E;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #FF6F00;
+    -fx-text-fill: white;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* ==================== DATE PICKER - SPOTIFY STYLE ==================== */
+.date-picker {
+    -fx-background-color: #242424;
+    -fx-border-width: 0;
+    -fx-background-radius: 4;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup {
+    -fx-background-color: #282828;
+    -fx-border-color: #3E3E3E;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0, 0, 8);
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #3E3E3E;
+}
+
+.date-picker-popup .selected {
+    -fx-background-color: #FF6F00;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .today {
+    -fx-border-color: #FF6F00;
+    -fx-border-width: 1;
+}
+
+/* ==================== LABELS ==================== */
+.label {
+    -fx-text-fill: white;
+}
+
+/* ==================== SCROLL BAR - SPOTIFY STYLE ==================== */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #282828;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #3E3E3E;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #535353;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+}
+
+/* ==================== DIALOG PANE - SPOTIFY STYLE ==================== */
+.dialog-pane {
+    -fx-background-color: #282828;
+    -fx-border-color: #3E3E3E;
+    -fx-border-width: 1;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 30, 0, 0, 10);
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #FF6F00;
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 24;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content {
+    -fx-background-color: #282828;
+    -fx-padding: 24;
+}
+
+.dialog-pane .content .label {
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: #1A1A1A;
+    -fx-padding: 16 24;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #FF6F00;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-width: 0;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #FF8F00;
+}
+
+.dialog-pane .button:default {
+    -fx-background-color: #FF6F00;
+}
+
+/* ==================== ALERT - SPOTIFY STYLE ==================== */
+.alert {
+    -fx-background-color: #282828;
+}
+
+.alert .header-panel {
+    -fx-background-color: #FF6F00;
+}
+
+.alert .content {
+    -fx-background-color: #282828;
+}
+
+.alert .content .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.alert.error .header-panel {
+    -fx-background-color: #E22134;
+}
+
+.alert.information .header-panel {
+    -fx-background-color: #1DB954;
+}
+
+.alert.warning .header-panel {
+    -fx-background-color: #FFA500;
+}
+
+.alert.confirmation .header-panel {
+    -fx-background-color: #2196F3;
+}
+
+/* ==================== STATUS BADGES ==================== */
+.badge-en-cours {
+    -fx-background-color: #FFF3E0;
+    -fx-text-fill: #E65100;
+    -fx-background-radius: 12;
+    -fx-padding: 4 12;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+
+.badge-retourne {
+    -fx-background-color: #E8F5E9;
+    -fx-text-fill: #2E7D32;
+    -fx-background-radius: 12;
+    -fx-padding: 4 12;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+
+/* ==================== TOOLTIP - SPOTIFY STYLE ==================== */
+.tooltip {
+    -fx-background-color: #282828;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 8 12;
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 12, 0, 0, 4);
+}
+
+/* ==================== SEPARATOR ==================== */
+.separator {
+    -fx-background-color: #282828;
+}
+
+/* ==================== CONTEXT MENU - SPOTIFY STYLE ==================== */
+.context-menu {
+    -fx-background-color: #282828;
+    -fx-border-color: #3E3E3E;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0, 0, 8);
+}
+
+.context-menu .menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #3E3E3E;
+}
+
+.context-menu .menu-item:focused {
+    -fx-background-color: #FF6F00;
+    -fx-text-fill: white;
+}
+
+/* ==================== CHECKBOX - SPOTIFY STYLE ==================== */
+.check-box {
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: #b3b3b3;
+    -fx-border-width: 2;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.check-box:hover .box {
+    -fx-border-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #FF6F00;
+    -fx-border-color: #FF6F00;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+/* ==================== RADIO BUTTON - SPOTIFY STYLE ==================== */
+.radio-button {
+    -fx-text-fill: white;
+}
+
+.radio-button .radio {
+    -fx-background-color: transparent;
+    -fx-border-color: #b3b3b3;
+    -fx-border-width: 2;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: white;
+}
+
+.radio-button:selected .radio {
+    -fx-border-color: #FF6F00;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #FF6F00;
+}
+
+/* ==================== PROGRESS BAR - SPOTIFY STYLE ==================== */
+.progress-bar {
+    -fx-background-color: #282828;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #FF6F00;
+    -fx-background-insets: 0;
+    -fx-padding: 4;
+}
+
+.progress-bar .track {
+    -fx-background-color: #3E3E3E;
+}

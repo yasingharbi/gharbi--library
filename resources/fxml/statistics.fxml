@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.StatisticsController"
+            stylesheets="@../css/statistics.css"
+            prefHeight="850.0" prefWidth="1400.0"
+            style="-fx-background-color: #0F1419;">
+
+    <!-- TOP BAR -->
+    <top>
+        <VBox>
+            <!-- Toolbar -->
+            <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="20">
+                <padding>
+                    <Insets top="15" right="30" bottom="15" left="30"/>
+                </padding>
+                
+                <Label text="📊 Statistiques Globales" styleClass="page-title">
+                    <font>
+                        <Font name="System Bold" size="24"/>
+                    </font>
+                </Label>
+                
+                <Pane HBox.hgrow="ALWAYS"/>
+                
+                <Button text="🔄 Rafraîchir" onAction="#onRefresh" styleClass="refresh-button">
+                    <font>
+                        <Font name="System Bold" size="13"/>
+                    </font>
+                </Button>
+                
+                <Button text="← Dashboard" onAction="#backToDashboard" styleClass="back-button">
+                    <font>
+                        <Font name="System Bold" size="14"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- MAIN CONTENT -->
+    <center>
+        <VBox spacing="20" style="-fx-background-color: #0F1419;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <!-- Statistics Cards -->
+            <HBox spacing="20" alignment="CENTER">
+                <!-- Card 1: Livres -->
+                <VBox styleClass="stat-card stat-card-books" alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label text="📚" style="-fx-font-size: 48px;"/>
+                    <Label text="Livres Totaux" styleClass="stat-label">
+                        <font>
+                            <Font name="System Bold" size="14"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="totalLivres" text="0" styleClass="stat-value">
+                        <font>
+                            <Font name="System Bold" size="36"/>
+                        </font>
+                    </Label>
+                </VBox>
+                
+                <!-- Card 2: Adhérents -->
+                <VBox styleClass="stat-card stat-card-members" alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label text="👥" style="-fx-font-size: 48px;"/>
+                    <Label text="Adhérents" styleClass="stat-label">
+                        <font>
+                            <Font name="System Bold" size="14"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="totalAdherents" text="0" styleClass="stat-value">
+                        <font>
+                            <Font name="System Bold" size="36"/>
+                        </font>
+                    </Label>
+                </VBox>
+                
+                <!-- Card 3: Emprunts -->
+                <VBox styleClass="stat-card stat-card-loans" alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label text="📖" style="-fx-font-size: 48px;"/>
+                    <Label text="Emprunts Actifs" styleClass="stat-label">
+                        <font>
+                            <Font name="System Bold" size="14"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="totalEmprunts" text="0" styleClass="stat-value">
+                        <font>
+                            <Font name="System Bold" size="36"/>
+                        </font>
+                    </Label>
+                </VBox>
+                
+                <!-- Card 4: Admins -->
+                <VBox styleClass="stat-card stat-card-admins" alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label text="👑" style="-fx-font-size: 48px;"/>
+                    <Label text="Administrateurs" styleClass="stat-label">
+                        <font>
+                            <Font name="System Bold" size="14"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="totalAdmins" text="0" styleClass="stat-value">
+                        <font>
+                            <Font name="System Bold" size="36"/>
+                        </font>
+                    </Label>
+                </VBox>
+                
+                <!-- Card 5: Retards -->
+                <VBox styleClass="stat-card stat-card-late" alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label text="⚠️" style="-fx-font-size: 48px;"/>
+                    <Label text="En Retard" styleClass="stat-label">
+                        <font>
+                            <Font name="System Bold" size="14"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="totalRetards" text="0" styleClass="stat-value">
+                        <font>
+                            <Font name="System Bold" size="36"/>
+                        </font>
+                    </Label>
+                </VBox>
+            </HBox>
+            
+            <!-- Charts Section -->
+            <HBox spacing="20" VBox.vgrow="ALWAYS">
+                <!-- Bar Chart -->
+                <VBox styleClass="chart-card" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <BarChart fx:id="barChart" VBox.vgrow="ALWAYS" styleClass="bar-chart" legendVisible="false">
+                        <xAxis>
+                            <CategoryAxis label="Catégories" styleClass="chart-axis"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Quantité" styleClass="chart-axis"/>
+                        </yAxis>
+                    </BarChart>
+                </VBox>
+                
+                <!-- Pie Chart -->
+                <VBox styleClass="chart-card" prefWidth="500">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <PieChart fx:id="pieChart" VBox.vgrow="ALWAYS" styleClass="pie-chart"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+    
+    <!-- BOTTOM STATUS BAR -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" styleClass="status-bar">
+            <padding>
+                <Insets top="12" right="20" bottom="12" left="20"/>
+            </padding>
+            <Label fx:id="statsLabel" text="📊 Vue d'ensemble de la bibliothèque" style="-fx-text-fill: #90CAF9; -fx-font-size: 13px; -fx-font-weight: bold;">
+                <font>
+                    <Font name="System Bold" size="13"/>
+                </font>
+            </Label>
+        </HBox>
+    </bottom>
+
+</BorderPane>

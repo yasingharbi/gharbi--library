@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.AdherentDialogController"
+           style="-fx-background-color: #121212;">
+
+    <!-- Ambient Background Glow -->
+    <Circle radius="400" opacity="0.05" translateX="-300" translateY="-200"
+            style="-fx-fill: #1DB954;"/>
+    <Circle radius="350" opacity="0.04" translateX="350" translateY="250"
+            style="-fx-fill: #1ED760;"/>
+
+    <!-- Main Container -->
+    <VBox spacing="0" maxWidth="1600" maxHeight="950"
+          style="-fx-background-color: #121212; 
+                 -fx-background-radius: 12;">
+
+        <!-- Spotify-Style Header -->
+        <VBox spacing="0" 
+              style="-fx-background: linear-gradient(to bottom, #1DB954 0%, #1aa34a 100%); 
+                     -fx-background-radius: 12 12 0 0; 
+                     -fx-padding: 0;">
+            
+            <!-- Top Navigation Bar -->
+            <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 20 30;">
+                <!-- Back Button (Spotify Style) -->
+                <Button text="←🔙" onAction="#backToDashboard"
+                        style="-fx-background-color: rgba(0, 0, 0, 0.3); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 24; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 50%; 
+                               -fx-min-width: 40; 
+                               -fx-min-height: 40;
+                               -fx-max-width: 40;
+                               -fx-max-height: 40;
+                               -fx-cursor: hand;">
+                    <tooltip>
+                        <Tooltip text="Retour au Dashboard"/>
+                    </tooltip>
+                </Button>
+                
+                <Region HBox.hgrow="ALWAYS"/>
+                
+                <!-- Refresh Button -->
+                <Button text="⟳🔄" 
+                        style="-fx-background-color: rgba(0, 0, 0, 0.3); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 20; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 50%; 
+                               -fx-min-width: 40; 
+                               -fx-min-height: 40;
+                               -fx-max-width: 40;
+                               -fx-max-height: 40;
+                               -fx-cursor: hand;">
+                    <tooltip>
+                        <Tooltip text="Actualiser"/>
+                    </tooltip>
+                </Button>
+            </HBox>
+            
+            <!-- Title Section -->
+            <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 20 40 40 40;">
+                <!-- Icon Circle -->
+                <StackPane>
+                    <Circle radius="50" 
+                            style="-fx-fill: rgba(0, 0, 0, 0.4);"/>
+                    <Label text="👥" style="-fx-font-size: 60;"/>
+                </StackPane>
+                
+                <VBox spacing="8">
+                    <Label text="GESTION" 
+                           style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: white; -fx-opacity: 0.9;"/>
+                    <Label text="Adhérents" 
+                           style="-fx-font-size: 72; -fx-font-weight: 900; -fx-text-fill: white;
+                                  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 3);"/>
+                    <Label fx:id="statsLabel" text="Total: 0 | 👑 Premium: 0 | Standard: 0" 
+                           style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: rgba(255, 255, 255, 0.8);"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Content Area -->
+        <VBox spacing="20" style="-fx-padding: 30 40; -fx-background-color: #121212;">
+            
+            <!-- Action Bar (Spotify Style) -->
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <!-- Add Button (Spotify Green) -->
+                <Button text="+" onAction="#onAdd"
+                        style="-fx-background-color: #1DB954; 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 36; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 50%; 
+                               -fx-min-width: 56; 
+                               -fx-min-height: 56;
+                               -fx-max-width: 56;
+                               -fx-max-height: 56;
+                               -fx-cursor: hand;
+                               -fx-effect: dropshadow(gaussian, rgba(29, 185, 84, 0.5), 12, 0, 0, 4);">
+                    <tooltip>
+                        <Tooltip text="Ajouter un adhérent"/>
+                    </tooltip>
+                </Button>
+                
+                <VBox spacing="2">
+                    <Label text="Nouvel Adhérent" 
+                           style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="Cliquez pour ajouter" 
+                           style="-fx-font-size: 12; -fx-text-fill: #b3b3b3;"/>
+                </VBox>
+                
+                <Region HBox.hgrow="ALWAYS"/>
+                
+                <!-- Search Bar (Spotify Style) -->
+                <HBox spacing="12" alignment="CENTER_LEFT"
+                      style="-fx-background-color: #242424; 
+                             -fx-background-radius: 500; 
+                             -fx-padding: 8 20;">
+                    <Label text="🔍" style="-fx-font-size: 18; -fx-text-fill: #b3b3b3;"/>
+                    <TextField fx:id="searchField" promptText="Rechercher un adhérent..." 
+                               style="-fx-background-color: transparent; 
+                                      -fx-text-fill: white; 
+                                      -fx-prompt-text-fill: #b3b3b3; 
+                                      -fx-font-size: 14;
+                                      -fx-border-width: 0;
+                                      -fx-focus-color: transparent;
+                                      -fx-faint-focus-color: transparent;"
+                               prefWidth="350"/>
+                </HBox>
+                
+                <!-- Edit Button -->
+                <Button text="✏️ Modifier" onAction="#onEdit"
+                        style="-fx-background-color: transparent; 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 14; 
+                               -fx-font-weight: bold; 
+                               -fx-border-color: #b3b3b3; 
+                               -fx-border-width: 2; 
+                               -fx-border-radius: 500; 
+                               -fx-background-radius: 500; 
+                               -fx-padding: 10 28;
+                               -fx-cursor: hand;"/>
+                
+                <!-- Delete Button -->
+                <Button text="🗑️ Supprimer" onAction="#onDelete"
+                        style="-fx-background-color: transparent; 
+                               -fx-text-fill: #f44336; 
+                               -fx-font-size: 14; 
+                               -fx-font-weight: bold; 
+                               -fx-border-color: #f44336; 
+                               -fx-border-width: 2; 
+                               -fx-border-radius: 500; 
+                               -fx-background-radius: 500; 
+                               -fx-padding: 10 28;
+                               -fx-cursor: hand;"/>
+            </HBox>
+
+            <!-- Table Container -->
+            <VBox spacing="10" VBox.vgrow="ALWAYS"
+                  style="-fx-background-color: transparent;">
+                
+                <TableView fx:id="membersTable" VBox.vgrow="ALWAYS"
+                           style="-fx-background-color: transparent; 
+                                  -fx-background-insets: 0;
+                                  -fx-padding: 0;">
+                    <columns>
+                        <TableColumn fx:id="colTelephone" text="TÉLÉPHONE" prefWidth="180" 
+                                    style="-fx-alignment: CENTER_LEFT;"/>
+                        <TableColumn fx:id="colNom" text="NOM" prefWidth="200" 
+                                    style="-fx-alignment: CENTER_LEFT;"/>
+                        <TableColumn fx:id="colPrenom" text="PRÉNOM" prefWidth="200" 
+                                    style="-fx-alignment: CENTER_LEFT;"/>
+                        <TableColumn fx:id="colDateNaissance" text="DATE NAISSANCE" prefWidth="180" 
+                                    style="-fx-alignment: CENTER;"/>
+                        <TableColumn fx:id="colAge" text="ÂGE" prefWidth="120" 
+                                    style="-fx-alignment: CENTER;"/>
+                        <TableColumn fx:id="colType" text="TYPE" prefWidth="180" 
+                                    style="-fx-alignment: CENTER;"/>
+                        <TableColumn fx:id="colTypeActions" text="ACTIONS" prefWidth="200" 
+                                    style="-fx-alignment: CENTER;"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+        </VBox>
+
+    </VBox>
+
+</StackPane>

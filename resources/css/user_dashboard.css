@@ -1,0 +1,572 @@
+/* ==================== ROOT & ANIMATED BACKGROUND ==================== */
+.root {
+    -fx-background-color: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    -fx-background-size: 300% 300%;
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+    animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0%, 100% { -fx-background-position: 0% 50%; }
+    50% { -fx-background-position: 100% 50%; }
+}
+
+/* ==================== ENHANCED TOP BAR ==================== */
+.top-bar {
+    -fx-background-color: linear-gradient(135deg, #1A1F26, #232931, #1A1F26);
+    -fx-background-size: 200% 200%;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0.6, 0, 8);
+    animation: topBarShift 10s ease infinite;
+}
+
+@keyframes topBarShift {
+    0%, 100% { -fx-background-position: 0% 50%; }
+    50% { -fx-background-position: 100% 50%; }
+}
+
+.header-container {
+    -fx-border-color: #263238;
+    -fx-border-width: 0 0 2 0;
+}
+
+.app-title {
+    -fx-text-fill: linear-gradient(to right, #2196F3, #42A5F5, #2196F3);
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.8), 12, 0.6, 0, 0);
+    animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% { 
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 10, 0.5, 0, 0);
+    }
+    50% { 
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 1.0), 20, 0.8, 0, 0);
+    }
+}
+
+.welcome-label {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.3), 5, 0.5, 0, 0);
+}
+
+.role-label {
+    -fx-text-fill: #90CAF9;
+    -fx-effect: dropshadow(gaussian, rgba(144, 202, 249, 0.5), 8, 0.5, 0, 0);
+    animation: rolePulse 2s ease-in-out infinite;
+}
+
+@keyframes rolePulse {
+    0%, 100% { -fx-scale-x: 1.0; -fx-scale-y: 1.0; }
+    50% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+}
+
+/* ==================== ENHANCED BUTTONS ==================== */
+.btn-refresh {
+    -fx-background-color: linear-gradient(to bottom, #2196F3, #1976D2);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 12, 0.6, 0, 4);
+    -fx-transition: all 0.3s ease;
+}
+
+.btn-refresh:hover {
+    -fx-background-color: linear-gradient(to bottom, #42A5F5, #2196F3);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.9), 18, 0.8, 0, 6);
+    animation: buttonShine 1.5s ease-in-out infinite;
+}
+
+@keyframes buttonShine {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.7), 15, 0.7, 0, 5);
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 1.0), 22, 0.9, 0, 8);
+    }
+}
+
+.btn-logout {
+    -fx-background-color: linear-gradient(to bottom, #F44336, #D32F2F);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(244, 67, 54, 0.6), 12, 0.6, 0, 4);
+    -fx-transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    -fx-background-color: linear-gradient(to bottom, #EF5350, #F44336);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(244, 67, 54, 0.9), 18, 0.8, 0, 6);
+    animation: logoutPulse 1s ease-in-out infinite;
+}
+
+@keyframes logoutPulse {
+    0%, 100% { -fx-rotate: 0; }
+    25% { -fx-rotate: -2; }
+    75% { -fx-rotate: 2; }
+}
+
+.btn-details {
+    -fx-background-color: linear-gradient(to bottom, #FF9800, #F57C00);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(255, 152, 0, 0.6), 12, 0.6, 0, 4);
+    -fx-transition: all 0.3s ease;
+}
+
+.btn-details:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFB300, #FF9800);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(255, 152, 0, 0.9), 18, 0.8, 0, 6);
+}
+
+/* ==================== ANIMATED STATISTICS CARDS ==================== */
+.stats-container {
+    -fx-background-color: rgba(30, 39, 50, 0.4);
+    -fx-border-color: #263238;
+    -fx-border-width: 0 0 2 0;
+}
+
+.stat-card {
+    -fx-background-radius: 18;
+    -fx-border-width: 2;
+    -fx-border-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 20, 0.6, 0, 8);
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+    -fx-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.stat-card:hover {
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-translate-y: -8;
+    animation: statFloat 2s ease-in-out infinite;
+}
+
+@keyframes statFloat {
+    0%, 100% { 
+        -fx-translate-y: -8;
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 20, 0.6, 0, 8);
+    }
+    50% { 
+        -fx-translate-y: -12;
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 25, 0.8, 0, 12);
+    }
+}
+
+.stat-card-primary {
+    -fx-background-color: linear-gradient(135deg, #1E88E5, #1565C0);
+    -fx-border-color: #42A5F5;
+    animation: primaryPulse 3s ease-in-out infinite;
+}
+
+@keyframes primaryPulse {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 18, 0.6, 0, 8);
+        -fx-border-color: #42A5F5;
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.9), 25, 0.8, 0, 12);
+        -fx-border-color: #64B5F6;
+    }
+}
+
+.stat-card-success {
+    -fx-background-color: linear-gradient(135deg, #43A047, #2E7D32);
+    -fx-border-color: #66BB6A;
+    animation: successPulse 3s ease-in-out infinite;
+}
+
+@keyframes successPulse {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.5), 18, 0.6, 0, 8);
+        -fx-border-color: #66BB6A;
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.9), 25, 0.8, 0, 12);
+        -fx-border-color: #81C784;
+    }
+}
+
+.stat-card-warning {
+    -fx-background-color: linear-gradient(135deg, #FB8C00, #EF6C00);
+    -fx-border-color: #FFA726;
+    animation: warningPulse 3s ease-in-out infinite;
+}
+
+@keyframes warningPulse {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(255, 152, 0, 0.5), 18, 0.6, 0, 8);
+        -fx-border-color: #FFA726;
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(255, 152, 0, 0.9), 25, 0.8, 0, 12);
+        -fx-border-color: #FFB74D;
+    }
+}
+
+.stat-card-danger {
+    -fx-background-color: linear-gradient(135deg, #E53935, #C62828);
+    -fx-border-color: #EF5350;
+    animation: dangerPulse 3s ease-in-out infinite;
+}
+
+@keyframes dangerPulse {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(244, 67, 54, 0.5), 18, 0.6, 0, 8);
+        -fx-border-color: #EF5350;
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(244, 67, 54, 0.9), 25, 0.8, 0, 12);
+        -fx-border-color: #E57373;
+    }
+}
+
+.stat-label {
+    -fx-text-fill: rgba(255, 255, 255, 0.9);
+    -fx-font-weight: bold;
+}
+
+.stat-value {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.6, 0, 3);
+    animation: valuePulse 2s ease-in-out infinite;
+}
+
+@keyframes valuePulse {
+    0%, 100% {
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+    50% {
+        -fx-scale-x: 1.1;
+        -fx-scale-y: 1.1;
+    }
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.main-content {
+    -fx-background-color: transparent;
+}
+
+.content-card {
+    -fx-background-color: linear-gradient(to bottom, rgba(30, 39, 50, 0.95), rgba(26, 31, 38, 0.95));
+    -fx-background-radius: 18;
+    -fx-border-color: #263238;
+    -fx-border-width: 2;
+    -fx-border-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 25, 0.7, 0, 10);
+    -fx-spacing: 15;
+    -fx-transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 30, 0.8, 0, 12);
+    -fx-border-color: #2196F3;
+}
+
+.section-title {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 8, 0.6, 0, 0);
+    animation: titleShimmer 3s ease-in-out infinite;
+}
+
+@keyframes titleShimmer {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.4), 6, 0.5, 0, 0);
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.8), 12, 0.7, 0, 0);
+    }
+}
+
+/* ==================== ENHANCED FILTERS ==================== */
+.filter-combo {
+    -fx-background-color: #263238;
+    -fx-text-fill: white;
+    -fx-border-color: #37474F;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-transition: all 0.3s ease;
+}
+
+.filter-combo:hover {
+    -fx-border-color: #2196F3;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 10, 0.6, 0, 0);
+}
+
+.filter-combo:focused {
+    -fx-border-color: #42A5F5;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.7), 15, 0.7, 0, 0);
+}
+
+.filter-combo .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #263238;
+    -fx-transition: all 0.2s ease;
+}
+
+.filter-combo .list-cell:hover {
+    -fx-background-color: #2A3441;
+    -fx-text-fill: #42A5F5;
+}
+
+.search-field {
+    -fx-background-color: #263238;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #78909C;
+    -fx-border-color: #37474F;
+    -fx-border-width: 2;
+    -fx-border-radius: 22;
+    -fx-background-radius: 22;
+    -fx-padding: 10 18;
+    -fx-transition: all 0.3s ease;
+}
+
+.search-field:focused {
+    -fx-border-color: #2196F3;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 12, 0.6, 0, 0);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* ==================== ENHANCED TABLE STYLING ==================== */
+.data-table {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0.5, 0, 5);
+}
+
+.data-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #263238, #2A3441);
+}
+
+.data-table .column-header {
+    -fx-background-color: linear-gradient(to bottom, #263238, #2A3441);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-border-color: #37474F;
+    -fx-padding: 12px;
+    -fx-transition: all 0.2s ease;
+}
+
+.data-table .column-header:hover {
+    -fx-background-color: linear-gradient(to bottom, #2A3441, #354555);
+    -fx-text-fill: #42A5F5;
+}
+
+.data-table .table-cell {
+    -fx-text-fill: #ECEFF1;
+    -fx-font-size: 13px;
+    -fx-padding: 10px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.data-table .table-row-cell {
+    -fx-background-color: #1E2732;
+    -fx-border-color: transparent;
+    -fx-transition: all 0.2s ease;
+}
+
+.data-table .table-row-cell:odd {
+    -fx-background-color: #232931;
+}
+
+.data-table .table-row-cell:hover {
+    -fx-background-color: #2A3441;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.4), 10, 0.5, 0, 0);
+}
+
+.data-table .table-row-cell:selected {
+    -fx-background-color: linear-gradient(to right, #2196F3, #1976D2);
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.7), 15, 0.7, 0, 5);
+    animation: rowSelect 0.3s ease;
+}
+
+@keyframes rowSelect {
+    0% {
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+    50% {
+        -fx-scale-x: 1.02;
+        -fx-scale-y: 1.02;
+    }
+    100% {
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+}
+
+.data-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.data-table .placeholder .label {
+    -fx-text-fill: #78909C;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+/* ==================== SEPARATOR ==================== */
+.separator {
+    -fx-background-color: linear-gradient(to right, transparent, #37474F, transparent);
+    -fx-padding: 1;
+    -fx-margin: 10 0;
+}
+
+/* ==================== BOTTOM BAR ==================== */
+.bottom-bar {
+    -fx-background-color: linear-gradient(to right, #1A1F26, #232931, #1A1F26);
+    -fx-border-color: #263238;
+    -fx-border-width: 2 0 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 15, 0.5, 0, -5);
+}
+
+/* ==================== ENHANCED SCROLL BAR ==================== */
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #1A1F26;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: linear-gradient(to bottom, #2196F3, #1976D2);
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 8, 0.6, 0, 0);
+    -fx-transition: all 0.3s ease;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #42A5F5, #2196F3);
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.9), 12, 0.7, 0, 0);
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #1976D2;
+}
+
+/* ==================== ENHANCED ALERTS ==================== */
+.alert {
+    -fx-background-color: #1E2732;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 30, 0.8, 0, 15);
+}
+
+.alert .header-panel {
+    -fx-background-color: linear-gradient(to right, #2196F3, #1976D2);
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 12, 0.6, 0, 5);
+}
+
+.alert .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 5, 0.5, 0, 2);
+}
+
+.alert .content {
+    -fx-background-color: #1E2732;
+}
+
+.alert .content .label {
+    -fx-text-fill: #ECEFF1;
+    -fx-font-size: 14px;
+}
+
+.alert .button {
+    -fx-background-color: linear-gradient(to bottom, #2196F3, #1976D2);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 10, 0.6, 0, 3);
+    -fx-transition: all 0.3s ease;
+}
+
+.alert .button:hover {
+    -fx-background-color: linear-gradient(to bottom, #42A5F5, #2196F3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.8), 15, 0.7, 0, 5);
+}
+
+/* ==================== GLOBAL ANIMATIONS ==================== */
+@keyframes fadeIn {
+    from { -fx-opacity: 0; }
+    to { -fx-opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from {
+        -fx-translate-x: 100;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-translate-x: 0;
+        -fx-opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        -fx-translate-x: -100;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-translate-x: 0;
+        -fx-opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { -fx-translate-y: 0; }
+    50% { -fx-translate-y: -10; }
+}
+
+/* ==================== LOADING SPINNER ==================== */
+@keyframes rotate {
+    from { -fx-rotate: 0; }
+    to { -fx-rotate: 360; }
+}
+
+.loading-indicator {
+    animation: rotate 1.5s linear infinite;
+}
+
+/* ==================== BADGE STYLES ==================== */
+.badge {
+    -fx-background-radius: 15;
+    -fx-padding: 6 14;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.6, 0, 3);
+    animation: badgeFloat 2s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+    0%, 100% {
+        -fx-translate-y: 0;
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0.5, 0, 2);
+    }
+    50% {
+        -fx-translate-y: -3;
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.7, 0, 4);
+    }
+}

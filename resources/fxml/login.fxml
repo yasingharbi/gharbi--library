@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+        <!-- Background Image -->
+        <ImageView fx:id="backgroundImage" fitHeight="700.0" fitWidth="1100.0" style="-fx-opacity: 0.15;">
+            <image>
+                <Image url="@../images/login%20page.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Login Card -->
+        <VBox fx:id="loginCard" alignment="TOP_CENTER" layoutX="380.0" layoutY="162.0" prefHeight="548.0" prefWidth="340.0" spacing="20" style="-fx-background-color: transparent;" styleClass="login-card">
+            <padding>
+                <Insets bottom="30" left="30" right="30" top="30" />
+            </padding>
+            
+            <!-- Title -->
+            <VBox alignment="CENTER" spacing="5">
+                <Label fx:id="titleLabel" styleClass="form-title" text="GHARBI'S LIBRARY">
+                    <font>
+                        <Font name="System Bold" size="28" />
+                    </font>
+                </Label>
+                <Label style="-fx-text-fill: #78909C; -fx-font-size: 12px; -fx-font-style: italic;" text="Library Management System">
+                    <font>
+                        <Font size="12" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <Separator style="-fx-background-color: #E0E0E0;" />
+
+            <!-- Username Field -->
+            <VBox spacing="8">
+                <Label styleClass="floating-label" text="👤 Username">
+                    <font>
+                        <Font name="System Bold" size="13" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameField" promptText="Enter your username" styleClass="input-field">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </TextField>
+            </VBox>
+
+            <!-- Password Field -->
+            <VBox spacing="8">
+                <Label styleClass="floating-label" text="🔒 Password">
+                    <font>
+                        <Font name="System Bold" size="13" />
+                    </font>
+                </Label>
+                <StackPane>
+                    <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="input-field">
+                        <font>
+                            <Font size="14" />
+                        </font>
+                    </PasswordField>
+                    <TextField fx:id="passwordVisibleField" managed="false" promptText="Enter your password" styleClass="input-field" visible="false">
+                        <font>
+                            <Font size="14" />
+                        </font>
+                    </TextField>
+                </StackPane>
+                <CheckBox fx:id="showPassword" styleClass="checkbox-label" text="Show password">
+                    <font>
+                        <Font size="12" />
+                    </font>
+                </CheckBox>
+            </VBox>
+
+            <!-- Stay Signed In -->
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <CheckBox fx:id="staySignedIn" />
+                <Label styleClass="checkbox-label" text="Stay signed in">
+                    <font>
+                        <Font size="12" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <!-- Login Button -->
+            <Button fx:id="loginButton" maxWidth="Infinity" onAction="#onLogin" prefHeight="50.0" styleClass="login-btn" text="Log in">
+                <font>
+                    <Font name="System Bold" size="16" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+             <Hyperlink fx:id="forgotLink" onAction="#onForgotPassword" styleClass="bottom-link" text="🔑 Forgot password?">
+                 <font>
+                     <Font size="13" />
+                 </font>
+             </Hyperlink>
+             <Hyperlink fx:id="registerLink" onAction="#onRegister" styleClass="bottom-link" text="✨ Create new account">
+                 <font>
+                     <Font size="13" />
+                 </font>
+             </Hyperlink>
+
+            <!-- Message Label -->
+            <Label fx:id="messageLabel" styleClass="message-label" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="13" />
+                </font>
+            </Label>
+
+            <!-- Links -->
+            <VBox alignment="CENTER" spacing="8" />
+        </VBox>
+
+              <!-- Footer -->
+        <HBox alignment="CENTER" layoutX="-50.0" layoutY="774.0" prefWidth="1100" spacing="10" style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-padding: 12;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 11px;" text="© 2025 GHARBI'S LIBRARY">
+                <font>
+                    <Font size="11" />
+                </font>
+            </Label>
+            <Label style="-fx-text-fill: white; -fx-font-size: 11px;" text="•" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 11px;" text="All Rights Reserved">
+                <font>
+                    <Font size="11" />
+                </font>
+            </Label>
+        </HBox>
+         
+            <!-- Logo -->
+         <ImageView fx:id="logoImage" fitHeight="276.0" fitWidth="268.0" layoutX="-64.0" layoutY="-73.0" preserveRatio="true">
+             <image>
+                 <Image url="@../../../../Downloads/app_transparent.png" />
+             </image>
+         </ImageView>
+    </children>
+</AnchorPane>

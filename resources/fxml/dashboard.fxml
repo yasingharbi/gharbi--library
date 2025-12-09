@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="900.0" prefWidth="1600.0" styleClass="root" stylesheets="@../css/dashboard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- LEFT SIDEBAR - SPOTIFY INSPIRED -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <left>
+        <VBox prefWidth="280" spacing="8" styleClass="sidebar">
+            <padding>
+                <Insets bottom="24" left="12" right="12" top="24" />
+            </padding>
+            
+            <!-- Logo Section -->
+            <HBox alignment="CENTER_LEFT" spacing="12" styleClass="sidebar-logo">
+                <padding>
+                    <Insets bottom="16" left="12" right="12" top="8" />
+                </padding>
+                <Label style="-fx-font-size: 32px;" text="��" />
+                <Label styleClass="sidebar-logo-text" text="GHARBI'S LIBRARY">
+                    <font>
+                        <Font name="System Bold" size="17" />
+                    </font>
+                </Label>
+            </HBox>
+            
+            <Separator styleClass="sidebar-separator" />
+            
+            <!-- Navigation Items -->
+            <VBox spacing="6" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets top="16" />
+                </padding>
+                
+                <!-- Home -->
+                <Button fx:id="btnHome" maxWidth="Infinity" onAction="#showDashboard" styleClass="sidebar-item, sidebar-item-active" text="🏠  Home">
+                    <font>
+                        <Font name="System Bold" size="14" />
+                    </font>
+                </Button>
+                
+                <!-- Search -->
+                <Button fx:id="btnSearch" maxWidth="Infinity" onAction="#showSearch" styleClass="sidebar-item" text="🔍  Search">
+                    <font>
+                        <Font name="System Bold" size="14" />
+                    </font>
+                </Button>
+                
+                <!-- Your Library -->
+                <Button fx:id="btnLibrary" maxWidth="Infinity" onAction="#showBooks" styleClass="sidebar-item" text="📚  Your Library">
+                    <font>
+                        <Font name="System Bold" size="14" />
+                    </font>
+                </Button>
+                
+                <Separator styleClass="sidebar-separator">
+                    <VBox.margin>
+                        <Insets bottom="12" top="12" />
+                    </VBox.margin>
+                </Separator>
+                
+                <!-- Admin Section -->
+                <Label fx:id="adminSectionLabel" styleClass="sidebar-section-title" text="ADMIN TOOLS">
+                    <font>
+                        <Font name="System Bold" size="11" />
+                    </font>
+                    <padding>
+                        <Insets bottom="6" left="16" top="8" />
+                    </padding>
+                </Label>
+                
+                <Button fx:id="btnStaff" maxWidth="Infinity" onAction="#openStaff" styleClass="sidebar-item" text="👥  Staff">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Button fx:id="btnMembers" maxWidth="Infinity" onAction="#openMembers" styleClass="sidebar-item" text="👨‍👩‍👧‍👦  Members">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Button fx:id="btnCategories" maxWidth="Infinity" onAction="#openCategory" styleClass="sidebar-item" text="🏷️  Categories">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Button fx:id="btnFines" maxWidth="Infinity" onAction="#openFines" styleClass="sidebar-item" text="💰  Fines">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Separator styleClass="sidebar-separator">
+                    <VBox.margin>
+                        <Insets bottom="12" top="12" />
+                    </VBox.margin>
+                </Separator>
+                
+                <!-- User Section -->
+                <Label styleClass="sidebar-section-title" text="YOUR COLLECTION">
+                    <font>
+                        <Font name="System Bold" size="11" />
+                    </font>
+                    <padding>
+                        <Insets bottom="6" left="16" top="8" />
+                    </padding>
+                </Label>
+                
+                <Button fx:id="btnLoans" maxWidth="Infinity" onAction="#openBorrow" styleClass="sidebar-item" text="📖  Borrowed Books">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Button fx:id="btnStats" maxWidth="Infinity" onAction="#openStats" styleClass="sidebar-item" text="📊  Statistics">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+               <!-- Notifications -->
+               <StackPane>
+                   <Button fx:id="btnNotifications" maxWidth="Infinity" onAction="#openNotifications" styleClass="sidebar-item" text="🔔  Notifications">
+                       <font>
+                           <Font size="14" />
+                       </font>
+                   </Button>
+
+                   <!-- Petit badge rouge -->
+                   <Label fx:id="notificationBadge" managed="false" style="-fx-background-color: #ff3b30;                                  -fx-text-fill: white;                                  -fx-font-size: 9px;                                  -fx-font-weight: bold;                                  -fx-padding: 2 6;                                  -fx-background-radius: 999;                                  -fx-alignment: center;" text="" visible="false">
+                       <StackPane.margin>
+                           <Insets right="12" top="2" />
+                       </StackPane.margin>
+                   </Label>
+               </StackPane>
+
+                <!-- Spacer -->
+                <Region VBox.vgrow="ALWAYS" />
+            </VBox>
+            
+            <!-- User Profile at Bottom -->
+            <VBox styleClass="sidebar-profile">
+                <padding>
+                    <Insets bottom="12" left="12" right="12" top="16" />
+                </padding>
+                
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Region fx:id="profileAvatar" styleClass="profile-avatar">
+                        <HBox.margin>
+                            <Insets right="0" />
+                        </HBox.margin>
+                    </Region>
+                    <VBox spacing="4" HBox.hgrow="ALWAYS">
+                        <Label fx:id="welcomeLabel" styleClass="profile-name" text="Welcome User">
+                            <font>
+                                <Font name="System Bold" size="14" />
+                            </font>
+                        </Label>
+                        <Label fx:id="roleLabel" styleClass="profile-role" text="Member">
+                            <font>
+                                <Font size="12" />
+                            </font>
+                        </Label>
+                    </VBox>
+                    <Button onAction="#showProfileMenu" styleClass="profile-menu-btn" text="⋯">
+                        <font>
+                            <Font size="18" />
+                        </font>
+                    </Button>
+                </HBox>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- MAIN CONTENT AREA -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <center>
+        <BorderPane styleClass="main-content">
+            
+            <!-- Top Navigation Bar -->
+            <top>
+                <HBox alignment="CENTER_LEFT" spacing="20" styleClass="top-nav">
+                    <padding>
+                        <Insets bottom="16" left="32" right="32" top="16" />
+                    </padding>
+                    
+                    <Button onAction="#onLogout" styleClass="icon-button-logout" text="⏻">
+                        <font>
+                            <Font size="20" />
+                        </font>
+                        <tooltip>
+                            <Tooltip text="Logout" />
+                        </tooltip>
+                    </Button>
+                </HBox>
+            </top>
+            
+            <!-- Scrollable Content -->
+            <center>
+                <StackPane>
+                    <!-- Dashboard Grid (Initial View) -->
+                    <ScrollPane fx:id="scrollPane" fitToWidth="true" styleClass="content-scroll">
+                        <VBox fx:id="dashboardContent" spacing="40" styleClass="dashboard-content">
+                            <padding>
+                                <Insets bottom="40" left="40" right="40" top="32" />
+                            </padding>
+                            
+                            <!-- Welcome Section -->
+                            <VBox spacing="12">
+                                <Label fx:id="greetingLabel" styleClass="greeting-text" text="Good Evening">
+                                    <font>
+                                        <Font name="System Bold" size="36" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                            
+                            <!-- Quick Access Cards -->
+                            <GridPane fx:id="quickAccessGrid" hgap="16" styleClass="quick-access-grid" vgap="16">
+                                <!-- Cards will be populated dynamically -->
+                            </GridPane>
+                            
+                            <!-- Recently Borrowed Section -->
+                            <VBox fx:id="recentSection" spacing="20">
+                                <HBox alignment="CENTER_LEFT" spacing="16">
+                                    <Label styleClass="section-title" text="Recently Borrowed">
+                                        <font>
+                                            <Font name="System Bold" size="26" />
+                                        </font>
+                                    </Label>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Hyperlink onAction="#showAllLoans" styleClass="show-all-link" text="Show all">
+                                        <font>
+                                            <Font name="System Bold" size="13" />
+                                        </font>
+                                    </Hyperlink>
+                                </HBox>
+                                
+                                <ScrollPane fitToHeight="true" hbarPolicy="NEVER" styleClass="horizontal-scroll" vbarPolicy="NEVER">
+                                    <HBox fx:id="recentBooksContainer" spacing="20" styleClass="card-container">
+                                        <padding>
+                                            <Insets bottom="10" />
+                                        </padding>
+                                    </HBox>
+                                </ScrollPane>
+                            </VBox>
+                            
+                            <!-- Popular Categories -->
+                            <VBox fx:id="categoriesSection" spacing="20">
+                                <Label styleClass="section-title" text="Browse by Category">
+                                    <font>
+                                        <Font name="System Bold" size="26" />
+                                    </font>
+                                </Label>
+                                
+                                <GridPane fx:id="categoriesGrid" hgap="16" styleClass="categories-grid" vgap="16">
+                                    <!-- Categories will be populated dynamically -->
+                                </GridPane>
+                            </VBox>
+                            
+                            <!-- Available Books -->
+                            <VBox fx:id="availableBooksSection" spacing="20">
+                                <HBox alignment="CENTER_LEFT" spacing="16">
+                                    <Label styleClass="section-title" text="Available Now">
+                                        <font>
+                                            <Font name="System Bold" size="26" />
+                                        </font>
+                                    </Label>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Hyperlink onAction="#showAllBooks" styleClass="show-all-link" text="Show all">
+                                        <font>
+                                            <Font name="System Bold" size="13" />
+                                        </font>
+                                    </Hyperlink>
+                                </HBox>
+                                
+                                <ScrollPane fitToHeight="true" hbarPolicy="NEVER" styleClass="horizontal-scroll" vbarPolicy="NEVER">
+                                    <HBox fx:id="availableBooksContainer" spacing="20" styleClass="card-container">
+                                        <padding>
+                                            <Insets bottom="10" />
+                                        </padding>
+                                    </HBox>
+                                </ScrollPane>
+                            </VBox>
+
+                            <!-- ═══════════════════════════════════════════════════════════════════
+                                 👨‍🎨 AUTHORS SECTION - Added to dashboardContent
+                                 ═══════════════════════════════════════════════════════════════════ -->
+
+                            <!-- Authors Section -->
+                            <VBox spacing="15" styleClass="dashboard-section">
+                                <padding>
+                                    <Insets bottom="20" left="0" right="0" top="20" />
+                                </padding>
+                                
+                                <!-- Section Header -->
+                                <HBox alignment="CENTER_LEFT" spacing="15">
+                                    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" styleClass="section-title" text="Popular Authors" />
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Button onAction="#showAllAuthors" style="-fx-background-color: transparent; -fx-text-fill: #B3B3B3; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand; -fx-underline: false;" styleClass="show-all-btn" text="Show all">
+                                        <graphic>
+                                            <Label style="-fx-text-fill: #B3B3B3; -fx-font-size: 14px;" text="→" />
+                                        </graphic>
+                                    </Button>
+                                </HBox>
+                                
+                                <!-- Authors Container (Horizontal Scroll) -->
+                                <ScrollPane fitToHeight="true" hbarPolicy="NEVER" style="-fx-background-color: transparent; -fx-background: transparent;" styleClass="authors-scroll" vbarPolicy="NEVER">
+                                    <content>
+                                        <HBox fx:id="authorsContainer" alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 5 0 15 0;" />
+                                    </content>
+                                </ScrollPane>
+                            </VBox>
+
+                        </VBox>
+                    </ScrollPane>
+                    
+                    <!-- Dynamic Content Area (for other views) -->
+                    <StackPane fx:id="contentArea" managed="false" visible="false">
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                    </StackPane>
+                </StackPane>
+            </center>
+            
+            <!-- Bottom Player-Like Bar -->
+            <bottom>
+                <HBox alignment="CENTER" spacing="20" styleClass="bottom-player-bar">
+                    <padding>
+                        <Insets bottom="14" left="20" right="20" top="14" />
+                    </padding>
+                    
+                    <!-- Left: Current Selection Info -->
+                    <HBox alignment="CENTER_LEFT" spacing="14" HBox.hgrow="ALWAYS">
+                        <Region styleClass="mini-cover" />
+                        <VBox spacing="4">
+                            <Label fx:id="currentBookTitle" styleClass="current-book-title" text="Library Management System">
+                                <font>
+                                    <Font size="13" />
+                                </font>
+                            </Label>
+                        </VBox>
+                        <Button styleClass="mini-action-btn" text="❤">
+                            <font>
+                                <Font size="14" />
+                            </font>
+                            <tooltip>
+                                <Tooltip text="Add to Favorites" />
+                            </tooltip>
+                        </Button>
+                    </HBox>
+                    
+                    <!-- Center: Stats -->
+                    <HBox alignment="CENTER" spacing="40">
+                        <VBox alignment="CENTER" spacing="6">
+                            <Label fx:id="totalBooksCount" styleClass="stat-number" text="0">
+                                <font>
+                                    <Font name="System Bold" size="18" />
+                                </font>
+                            </Label>
+                            <Label styleClass="stat-label" text="Total Books">
+                                <font>
+                                    <Font size="10" />
+                                </font>
+                            </Label>
+                        </VBox>
+                        
+                        <VBox alignment="CENTER" spacing="6">
+                            <Label fx:id="activeLoansCount" styleClass="stat-number" text="0">
+                                <font>
+                                    <Font name="System Bold" size="18" />
+                                </font>
+                            </Label>
+                            <Label styleClass="stat-label" text="Active Loans">
+                                <font>
+                                    <Font size="10" />
+                                </font>
+                            </Label>
+                        </VBox>
+                        
+                        <VBox alignment="CENTER" spacing="6">
+                            <Label fx:id="availableCount" styleClass="stat-number" text="0">
+                                <font>
+                                    <Font name="System Bold" size="18" />
+                                </font>
+                            </Label>
+                            <Label styleClass="stat-label" text="Available">
+                                <font>
+                                    <Font size="10" />
+                                </font>
+                            </Label>
+                        </VBox>
+                    </HBox>
+                    
+                    <!-- Right: Volume/Settings -->
+                    <HBox alignment="CENTER_RIGHT" spacing="14" HBox.hgrow="ALWAYS">
+                        <Button fx:id="settingsButton" onAction="#onOpenSettings" styleClass="mini-action-btn" text="⚙">
+                            <font>
+                                <Font size="16" />
+                            </font>
+                            <tooltip>
+                                <Tooltip text="Settings" />
+                            </tooltip>
+                        </Button>
+                    </HBox>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </center>
+
+</BorderPane>

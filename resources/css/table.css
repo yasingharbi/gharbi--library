@@ -1,0 +1,223 @@
+/* ===========================
+   PREMIUM LIBRARY TABLE STYLES
+   =========================== */
+
+/* Main Table Container */
+.table-view {
+    -fx-background-color: #1a1a2e;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: #2d2d44;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 15, 0, 0, 4);
+}
+
+/* Remove default table borders */
+.table-view:focused {
+    -fx-background-color: #1a1a2e;
+    -fx-background-insets: 0;
+}
+
+/* Column Header Area */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #2d2d44 0%, #252538 100%);
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent transparent #3a3a52 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+/* Individual Column Headers */
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 16 20 16 20;
+    -fx-alignment: center-left;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #e0e0e8;
+    -fx-font-family: "Segoe UI Semibold", "San Francisco", "Helvetica Neue", Arial, sans-serif;
+    -fx-letter-spacing: 0.5px;
+}
+
+.table-view .column-header:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Table Rows */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent transparent #252538 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:filled {
+    -fx-background-color: #1e1e30;
+}
+
+.table-row-cell:filled:odd {
+    -fx-background-color: #1a1a2e;
+}
+
+/* Row Hover Effect */
+.table-row-cell:filled:hover {
+    -fx-background-color: #252541;
+    -fx-cursor: hand;
+}
+
+/* Row Selection */
+.table-row-cell:filled:selected {
+    -fx-background-color: linear-gradient(to right, #4a90e2 0%, #5b9ee8 100%);
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:filled:selected:hover {
+    -fx-background-color: linear-gradient(to right, #5b9ee8 0%, #6dabee 100%);
+}
+
+/* Focused Row */
+.table-row-cell:filled:focused {
+    -fx-background-color: #4a90e2;
+    -fx-border-color: #6dabee;
+    -fx-border-width: 1;
+    -fx-background-insets: 0;
+}
+
+/* Table Cells */
+.table-cell {
+    -fx-padding: 14 20 14 20;
+    -fx-alignment: center-left;
+    -fx-border-color: transparent;
+    -fx-text-fill: #e8e8f0;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", "San Francisco", "Helvetica Neue", Arial, sans-serif;
+}
+
+.table-row-cell:filled:selected .table-cell {
+    -fx-text-fill: white;
+    -fx-font-weight: 500;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Placeholder (Empty Table) */
+.table-view .placeholder {
+    -fx-background-color: transparent;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #6a6a7f;
+    -fx-font-size: 15px;
+    -fx-font-style: italic;
+    -fx-padding: 40;
+}
+
+/* Scrollbar Styling */
+.table-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-pref-width: 10;
+}
+
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-pref-height: 10;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #3a3a52;
+    -fx-background-radius: 5;
+    -fx-background-insets: 2;
+}
+
+.table-view .scroll-bar .thumb:hover {
+    -fx-background-color: #4a4a62;
+}
+
+.table-view .scroll-bar .thumb:pressed {
+    -fx-background-color: #5a5a72;
+}
+
+.table-view .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Corner Region (where scrollbars meet) */
+.table-view .corner {
+    -fx-background-color: #1a1a2e;
+}
+
+/* Column Resize Indicator */
+.table-view .column-resize-line {
+    -fx-background-color: #4a90e2;
+    -fx-padding: 0 1 0 1;
+}
+
+/* Column Drag Header */
+.table-view .column-drag-header {
+    -fx-background-color: #4a90e2;
+    -fx-border-color: #6dabee;
+    -fx-opacity: 0.7;
+}
+
+/* Focus Border Removal */
+.table-view:focused {
+    -fx-background-color: #1a1a2e;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* Text Alignment Helpers */
+.table-cell.align-center {
+    -fx-alignment: center;
+}
+
+.table-cell.align-right {
+    -fx-alignment: center-right;
+}
+
+/* Special Cell Types */
+.table-cell.status-cell {
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+}
+
+.table-cell.number-cell {
+    -fx-font-family: "Consolas", "Monaco", "Courier New", monospace;
+    -fx-alignment: center-right;
+}
+
+/* Highlight Animation */
+@keyframes highlight-pulse {
+    from {
+        -fx-background-color: #4a90e2;
+    }
+    to {
+        -fx-background-color: #1e1e30;
+    }
+}

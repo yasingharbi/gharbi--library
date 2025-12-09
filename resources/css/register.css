@@ -1,0 +1,220 @@
+/* ==================== ROOT & BACKGROUND ==================== */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    -fx-font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+}
+
+/* ==================== REGISTER CARD ==================== */
+.register-card {
+    -fx-background-color: linear-gradient(to bottom, rgba(30, 39, 50, 0.95), rgba(42, 52, 65, 0.95));
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 30, 0, 0, 10);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-max-width: 500;
+}
+
+/* ==================== TITLE & SUBTITLE ==================== */
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 3, 0, 0, 2);
+}
+
+.subtitle-label {
+    -fx-text-fill: #B0BEC5;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 10 0;
+}
+
+/* ==================== FORM GROUPS ==================== */
+.form-group {
+    -fx-spacing: 8;
+}
+
+.field-label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* ==================== TEXT FIELDS ==================== */
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-padding: 12;
+}
+
+.text-field:focused {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-border-color: #32be8f;
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.4), 5, 0, 0, 0);
+}
+
+/* ==================== PASSWORD FIELDS ==================== */
+.password-field {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-padding: 12;
+}
+
+.password-field:focused {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-border-color: #32be8f;
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.4), 5, 0, 0, 0);
+}
+
+/* ==================== CHECKBOX ==================== */
+.checkbox {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.checkbox .box {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+}
+
+.checkbox:selected .box {
+    -fx-background-color: #32be8f;
+    -fx-border-color: #32be8f;
+}
+
+.checkbox:selected .mark {
+    -fx-background-color: white;
+}
+
+.checkbox:hover .box {
+    -fx-border-color: #32be8f;
+}
+
+/* ==================== COMBO BOX ==================== */
+.combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+}
+
+.combo-box:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-border-color: #32be8f;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: rgba(30, 39, 50, 0.95);
+    -fx-text-fill: white;
+    -fx-padding: 8;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: rgba(50, 190, 143, 0.3);
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: rgba(30, 39, 50, 0.98);
+    -fx-border-color: #32be8f;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 5);
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: rgba(50, 190, 143, 0.3);
+    -fx-background-radius: 0 8 8 0;
+}
+
+.combo-box .arrow {
+    -fx-background-color: white;
+}
+
+/* ==================== PROGRESS INDICATOR ==================== */
+.progress-indicator {
+    -fx-progress-color: #32be8f;
+}
+
+.strength-label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* ==================== MESSAGE LABEL ==================== */
+.message-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-padding: 5;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-register {
+    -fx-background-color: linear-gradient(to right, #32be8f, #38d39f);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.5), 10, 0, 0, 3);
+    -fx-font-size: 14px;
+}
+
+.btn-register:hover {
+    -fx-background-color: linear-gradient(to right, #38d39f, #32be8f);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.7), 15, 0, 0, 5);
+}
+
+.btn-register:disabled {
+    -fx-background-color: rgba(100, 100, 100, 0.5);
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-cursor: default;
+    -fx-effect: none;
+}
+
+.btn-cancel {
+    -fx-background-color: linear-gradient(to right, #607D8B, #455A64);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-font-size: 14px;
+}
+
+.btn-cancel:hover {
+    -fx-background-color: linear-gradient(to right, #78909C, #607D8B);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* ==================== ANIMATIONS ==================== */
+.register-card,
+.btn-register,
+.btn-cancel,
+.text-field,
+.password-field,
+.combo-box {
+    -fx-transition: all 0.3s ease;
+}

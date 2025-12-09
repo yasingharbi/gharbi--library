@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.NotificationsController"
+            stylesheets="@../css/notifications.css" styleClass="root">
+
+    <top>
+        <VBox styleClass="top-bar">
+            <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header-container">
+                <Label text="🔔 NOTIFICATIONS" styleClass="page-title" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="🔄 Refresh" onAction="#onRefresh" styleClass="btn-refresh" style="-fx-font-size: 14px;"/>
+                <Button text="🗑️ Clear All" onAction="#onClearAll" styleClass="btn-clear" style="-fx-font-size: 14px;"/>
+                <Button text="⬅️ Back" onAction="#backToDashboard" styleClass="btn-back" style="-fx-font-size: 14px;"/>
+            </HBox>
+            <Label fx:id="statusLabel" text="" styleClass="status-label" style="-fx-font-size: 13px;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" styleClass="content-container">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+            <!-- Statistics Cards -->
+            <Label text="📊 Vue d'ensemble" styleClass="section-title" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            
+            <GridPane hgap="15" vgap="15">
+                <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label text="📬 Total" styleClass="stat-label" style="-fx-font-size: 13px;"/>
+                    <Label fx:id="totalNotificationsLabel" text="0" styleClass="stat-value" style="-fx-font-size: 36px;"/>
+                </VBox>
+                <VBox styleClass="stat-card urgent" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label text="🚨 Urgent" styleClass="stat-label" style="-fx-font-size: 13px;"/>
+                    <Label fx:id="urgentLabel" text="0" styleClass="stat-value" style="-fx-font-size: 36px;"/>
+                </VBox>
+                <VBox styleClass="stat-card warning" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Label text="⚠️ Avertissement" styleClass="stat-label" style="-fx-font-size: 13px;"/>
+                    <Label fx:id="warningLabel" text="0" styleClass="stat-value" style="-fx-font-size: 36px;"/>
+                </VBox>
+                <VBox styleClass="stat-card info" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                    <Label text="ℹ️ Info" styleClass="stat-label" style="-fx-font-size: 13px;"/>
+                    <Label fx:id="infoLabel" text="0" styleClass="stat-value" style="-fx-font-size: 36px;"/>
+                </VBox>
+            </GridPane>
+
+            <Separator/>
+
+            <!-- Filter Section -->
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <Label text="🔍 Filtrer:" styleClass="filter-label" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <ComboBox fx:id="filterCombo" prefWidth="200" styleClass="combo-box" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="searchField" promptText="Rechercher..." prefWidth="300" styleClass="search-field" style="-fx-font-size: 14px;"/>
+            </HBox>
+
+            <!-- Notifications Table -->
+            <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+                <Label text="📋 Liste des Notifications" styleClass="table-title" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <TableView fx:id="notificationsTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colType" text="Type" prefWidth="180"/>
+                        <TableColumn fx:id="colMessage" text="Message" prefWidth="450"/>
+                        <TableColumn fx:id="colDate" text="Date" prefWidth="120"/>
+                        <TableColumn fx:id="colPriority" text="Priorité" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

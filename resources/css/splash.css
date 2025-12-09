@@ -1,0 +1,77 @@
+/* ==================== ROOT - FOND TRANSPARENT/WHITE ==================== */
+.splash-root {
+    -fx-background-color: transparent;
+}
+
+.splash-container {
+    -fx-background-color: transparent;
+}
+
+/* ==================== LOGO PRINCIPAL ==================== */
+.logo-container {
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0), 0, 0, 0, 0);
+}
+
+.logo-circle {
+    -fx-fill: radial-gradient(center 50% 50%, radius 100%, 
+        rgba(50, 190, 143, 0.3), 
+        rgba(50, 190, 143, 0) 70%);
+    -fx-stroke: rgba(50, 190, 143, 0.8);
+    -fx-stroke-width: 3;
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0), 0, 0, 0, 0);
+}
+
+/* ==================== CERCLES DE CHOC (SHOCKWAVES) ==================== */
+.glow-circle {
+    -fx-fill: transparent;
+    -fx-stroke-width: 4;
+    -fx-opacity: 0;
+}
+
+.glow-1 {
+    -fx-stroke: rgba(50, 190, 143, 1.0);
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 1.0), 30, 0.9, 0, 0);
+}
+
+.glow-2 {
+    -fx-stroke: rgba(33, 150, 243, 1.0);
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 1.0), 35, 0.9, 0, 0);
+}
+
+.glow-3 {
+    -fx-stroke: rgba(156, 39, 176, 1.0);
+    -fx-effect: dropshadow(gaussian, rgba(156, 39, 176, 1.0), 40, 0.9, 0, 0);
+}
+
+/* ==================== FLASH EFFECTS ==================== */
+@keyframes flashGlow {
+    0% {
+        -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0), 0, 0, 0, 0);
+    }
+    20% {
+        -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 1.0), 100, 1.0, 0, 0);
+    }
+    100% {
+        -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.6), 50, 0.8, 0, 0);
+    }
+}
+
+/* ==================== IMPACT SHAKE ==================== */
+@keyframes impactShake {
+    0%, 100% {
+        -fx-translate-x: 0;
+        -fx-translate-y: 0;
+    }
+    25% {
+        -fx-translate-x: -5;
+        -fx-translate-y: 3;
+    }
+    50% {
+        -fx-translate-x: 5;
+        -fx-translate-y: -3;
+    }
+    75% {
+        -fx-translate-x: -3;
+        -fx-translate-y: 2;
+    }
+}

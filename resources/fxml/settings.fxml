@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.SettingsController"
+           prefWidth="600" prefHeight="700"
+           style="-fx-background-color: linear-gradient(to bottom right, #0f1419, #1a1f26, #0a0e14);">
+
+    <!-- Main Card Container -->
+    <VBox spacing="0" maxWidth="550" maxHeight="650"
+          style="-fx-background-color: rgba(255, 255, 255, 0.05); 
+                 -fx-background-radius: 20; 
+                 -fx-border-color: rgba(50, 190, 143, 0.3); 
+                 -fx-border-width: 1; 
+                 -fx-border-radius: 20;
+                 -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 20, 0.3, 0, 5);">
+
+        <!-- Header Section -->
+        <VBox spacing="5" alignment="CENTER" 
+              style="-fx-background-color: linear-gradient(to right, rgba(50, 190, 143, 0.2), rgba(33, 150, 243, 0.2)); 
+                     -fx-background-radius: 20 20 0 0; 
+                     -fx-padding: 30 20 30 20;">
+            
+            <!-- Settings Icon -->
+            <HBox alignment="CENTER" spacing="15">
+                <StackPane>
+                    <Circle radius="30" 
+                            style="-fx-fill: linear-gradient(to bottom right, rgba(50, 190, 143, 0.3), rgba(33, 150, 243, 0.3)); 
+                                   -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.6), 15, 0.7, 0, 0);"/>
+                    <Label text="⚙" style="-fx-font-size: 40; -fx-text-fill: #32be8f;"/>
+                </StackPane>
+                
+                <VBox spacing="3" alignment="CENTER_LEFT">
+                    <Label text="Paramètres" 
+                           style="-fx-font-size: 32; -fx-font-weight: bold; -fx-text-fill: white;
+                                  -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.4), 8, 0.5, 0, 2);"/>
+                    <Label text="Personnalisez votre expérience" 
+                           style="-fx-font-size: 13; -fx-text-fill: rgba(255, 255, 255, 0.7); -fx-font-style: italic;"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Content Section -->
+        <ScrollPane fitToWidth="true" 
+                    style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;"
+                    VBox.vgrow="ALWAYS">
+            <VBox spacing="20">
+                <padding>
+                    <Insets top="25" right="30" bottom="25" left="30"/>
+                </padding>
+
+                <!-- APPEARANCE SECTION -->
+                <VBox spacing="15" 
+                      style="-fx-background-color: rgba(255, 255, 255, 0.03); 
+                             -fx-background-radius: 15; 
+                             -fx-border-color: rgba(50, 190, 143, 0.2); 
+                             -fx-border-width: 1; 
+                             -fx-border-radius: 15; 
+                             -fx-padding: 20;
+                             -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 0, 3);">
+                    
+                    <!-- Section Header -->
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="🎨" style="-fx-font-size: 24;"/>
+                        <Label text="Apparence" 
+                               style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #32be8f;
+                                      -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.5), 5, 0.5, 0, 1);"/>
+                    </HBox>
+                    
+                    <Separator style="-fx-background-color: rgba(50, 190, 143, 0.3);"/>
+                    
+                    <!-- Theme Selection -->
+                    <VBox spacing="12">
+                        <Label text="Sélectionner le thème" 
+                               style="-fx-font-size: 14; -fx-text-fill: rgba(255, 255, 255, 0.9); -fx-font-weight: 600;"/>
+                        
+                        <HBox spacing="15" alignment="CENTER_LEFT">
+                            <!-- Dark Theme Button -->
+                            <VBox spacing="8" alignment="CENTER"
+                                  style="-fx-background-color: rgba(20, 25, 30, 0.8); 
+                                         -fx-background-radius: 12; 
+                                         -fx-padding: 20; 
+                                         -fx-border-color: rgba(50, 190, 143, 0.4); 
+                                         -fx-border-width: 2; 
+                                         -fx-border-radius: 12; 
+                                         -fx-cursor: hand;
+                                         -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.3), 8, 0.4, 0, 2);"
+                                  HBox.hgrow="ALWAYS">
+                                <Label text="🌙" style="-fx-font-size: 32;"/>
+                                <RadioButton fx:id="darkThemeRadio" text="Thème Sombre" 
+                                           style="-fx-text-fill: white; -fx-font-size: 13; -fx-font-weight: bold;"
+                                           toggleGroup="$themeGroup"/>
+                                <Label text="Élégant et reposant" 
+                                       style="-fx-font-size: 10; -fx-text-fill: rgba(255, 255, 255, 0.6);"/>
+                            </VBox>
+                            
+                            <!-- Light Theme Button -->
+                            <VBox spacing="8" alignment="CENTER"
+                                  style="-fx-background-color: rgba(240, 245, 250, 0.15); 
+                                         -fx-background-radius: 12; 
+                                         -fx-padding: 20; 
+                                         -fx-border-color: rgba(33, 150, 243, 0.4); 
+                                         -fx-border-width: 2; 
+                                         -fx-border-radius: 12; 
+                                         -fx-cursor: hand;
+                                         -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.3), 8, 0.4, 0, 2);"
+                                  HBox.hgrow="ALWAYS">
+                                <Label text="☀️" style="-fx-font-size: 32;"/>
+                                <RadioButton fx:id="lightThemeRadio" text="Thème Clair" 
+                                           style="-fx-text-fill: white; -fx-font-size: 13; -fx-font-weight: bold;"
+                                           toggleGroup="$themeGroup"/>
+                                <Label text="Lumineux et moderne" 
+                                       style="-fx-font-size: 10; -fx-text-fill: rgba(255, 255, 255, 0.6);"/>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+                </VBox>
+
+                <!-- BEHAVIOR SECTION -->
+                <VBox spacing="15" 
+                      style="-fx-background-color: rgba(255, 255, 255, 0.03); 
+                             -fx-background-radius: 15; 
+                             -fx-border-color: rgba(33, 150, 243, 0.2); 
+                             -fx-border-width: 1; 
+                             -fx-border-radius: 15; 
+                             -fx-padding: 20;
+                             -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 0, 3);">
+                    
+                    <!-- Section Header -->
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="⚡" style="-fx-font-size: 24;"/>
+                        <Label text="Comportement" 
+                               style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2196F3;
+                                      -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 5, 0.5, 0, 1);"/>
+                    </HBox>
+                    
+                    <Separator style="-fx-background-color: rgba(33, 150, 243, 0.3);"/>
+                    
+                    <!-- Options -->
+                    <VBox spacing="15">
+                        <!-- Animations Option -->
+                        <HBox spacing="15" alignment="CENTER_LEFT"
+                              style="-fx-background-color: rgba(50, 190, 143, 0.08); 
+                                     -fx-background-radius: 10; 
+                                     -fx-padding: 15;
+                                     -fx-border-color: rgba(50, 190, 143, 0.2);
+                                     -fx-border-width: 1;
+                                     -fx-border-radius: 10;">
+                            <VBox spacing="3" HBox.hgrow="ALWAYS">
+                                <CheckBox fx:id="animationsCheck" text="Activer les animations" 
+                                         style="-fx-text-fill: white; -fx-font-size: 14; -fx-font-weight: 600;"/>
+                                <Label text="Des transitions fluides et élégantes" 
+                                       style="-fx-font-size: 11; -fx-text-fill: rgba(255, 255, 255, 0.6); -fx-padding: 0 0 0 28;"/>
+                            </VBox>
+                            <Label text="🎬" style="-fx-font-size: 28;"/>
+                        </HBox>
+                        
+                        <!-- Notifications Option -->
+                        <HBox spacing="15" alignment="CENTER_LEFT"
+                              style="-fx-background-color: rgba(33, 150, 243, 0.08); 
+                                     -fx-background-radius: 10; 
+                                     -fx-padding: 15;
+                                     -fx-border-color: rgba(33, 150, 243, 0.2);
+                                     -fx-border-width: 1;
+                                     -fx-border-radius: 10;">
+                            <VBox spacing="3" HBox.hgrow="ALWAYS">
+                                <CheckBox fx:id="notificationsCheck" text="Activer les notifications" 
+                                         style="-fx-text-fill: white; -fx-font-size: 14; -fx-font-weight: 600;"/>
+                                <Label text="Recevez des alertes importantes" 
+                                       style="-fx-font-size: 11; -fx-text-fill: rgba(255, 255, 255, 0.6); -fx-padding: 0 0 0 28;"/>
+                            </VBox>
+                            <Label text="🔔" style="-fx-font-size: 28;"/>
+                        </HBox>
+                    </VBox>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+
+        <!-- Action Buttons Footer -->
+        <HBox spacing="15" alignment="CENTER" 
+              style="-fx-background-color: rgba(255, 255, 255, 0.03); 
+                     -fx-background-radius: 0 0 20 20; 
+                     -fx-padding: 20 30 25 30;">
+            
+            <Button text="✕ Annuler" onAction="#onCancel" 
+                    prefWidth="150" prefHeight="45"
+                    style="-fx-background-color: rgba(255, 255, 255, 0.08); 
+                           -fx-text-fill: white; 
+                           -fx-font-size: 14; 
+                           -fx-font-weight: bold; 
+                           -fx-background-radius: 10;
+                           -fx-border-color: rgba(255, 255, 255, 0.2);
+                           -fx-border-width: 1;
+                           -fx-border-radius: 10;
+                           -fx-cursor: hand;
+                           -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0.3, 0, 2);"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <Button text="✓ Enregistrer" onAction="#onSave" 
+                    prefWidth="180" prefHeight="45"
+                    style="-fx-background-color: linear-gradient(to right, #32be8f, #2196F3); 
+                           -fx-text-fill: white; 
+                           -fx-font-size: 15; 
+                           -fx-font-weight: bold; 
+                           -fx-background-radius: 10;
+                           -fx-cursor: hand;
+                           -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.6), 12, 0.6, 0, 3);"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>

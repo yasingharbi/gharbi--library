@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.RegisterController"
+           stylesheets="@../css/register.css"
+           prefWidth="720" prefHeight="520"
+           styleClass="root">
+
+    <children>
+        <!-- Card container -->
+        <VBox fx:id="registerCard" spacing="16" alignment="TOP_CENTER" styleClass="register-card">
+            <padding>
+                <Insets top="24" right="24" bottom="24" left="24"/>
+            </padding>
+
+            <!-- Title -->
+            <Label text="Create your account" styleClass="title-label">
+                <font>
+                    <Font name="System Bold" size="20"/>
+                </font>
+            </Label>
+
+            <!-- Message area -->
+		    <!-- Message area -->
+			<VBox fx:id="messageContainer" spacing="8" alignment="CENTER_LEFT" styleClass="message-container">
+			    <Label fx:id="messageIcon" text="" styleClass="message-icon"/>
+			    <Label fx:id="messageLabel" text="" wrapText="true" styleClass="message-text"/>
+			</VBox>
+
+
+            <!-- Username -->
+            <VBox spacing="4" prefWidth="480">
+                <Label text="Username" styleClass="field-label"/>
+                <TextField fx:id="usernameField" promptText="Choose a username" styleClass="text-input"/>
+                <Label fx:id="usernameValidation" text="" wrapText="true"/>
+            </VBox>
+
+            <!-- Password / confirm + show checkbox -->
+            <VBox spacing="10" prefWidth="480">
+
+                <!-- Password row -->
+                <VBox spacing="4">
+                    <Label text="Password" styleClass="field-label"/>
+                    <StackPane>
+                        <PasswordField fx:id="passwordField"
+                                       promptText="Enter password"
+                                       styleClass="text-input"
+                                       StackPane.alignment="CENTER_LEFT"/>
+                        <TextField fx:id="passwordVisibleField"
+                                   promptText="Enter password"
+                                   styleClass="text-input"
+                                   visible="false" managed="false"
+                                   StackPane.alignment="CENTER_LEFT"/>
+                    </StackPane>
+                    <Label fx:id="passwordValidation" text="" wrapText="true"/>
+                </VBox>
+
+                <!-- Confirm password row -->
+                <VBox spacing="4">
+                    <Label text="Confirm password" styleClass="field-label"/>
+                    <StackPane>
+                        <PasswordField fx:id="confirmPasswordField"
+                                       promptText="Confirm password"
+                                       styleClass="text-input"
+                                       StackPane.alignment="CENTER_LEFT"/>
+                        <TextField fx:id="confirmVisibleField"
+                                   promptText="Confirm password"
+                                   styleClass="text-input"
+                                   visible="false" managed="false"
+                                   StackPane.alignment="CENTER_LEFT"/>
+                    </StackPane>
+                    <Label fx:id="confirmValidation" text="" wrapText="true"/>
+                </VBox>
+
+                <!-- Show password -->
+                <CheckBox fx:id="showPasswordCheck"
+                          text="Show passwords"
+                          styleClass="show-password-check"/>
+            </VBox>
+
+            <!-- Role + strength line -->
+            <HBox spacing="16" alignment="CENTER_LEFT" prefWidth="480">
+                <VBox spacing="4">
+                    <Label text="Role" styleClass="field-label"/>
+                    <ComboBox fx:id="roleCombo" prefWidth="220" styleClass="role-combo"/>
+                </VBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <VBox spacing="4" alignment="CENTER_RIGHT">
+                    <Label fx:id="strengthLabel" text="" styleClass="strength-label"/>
+                    <HBox fx:id="strengthBars" spacing="4" alignment="CENTER_RIGHT"/>
+                    <ProgressIndicator fx:id="strengthIndicator" prefWidth="30" prefHeight="30"/>
+                </VBox>
+            </HBox>
+
+            <!-- Loading indicator -->
+            <HBox spacing="10" alignment="CENTER_LEFT" prefWidth="480">
+                <ProgressIndicator fx:id="loadingIndicator" prefWidth="24" prefHeight="24"/>
+                <Label fx:id="loadingText" text="Securing your credentials..." styleClass="loading-text"/>
+            </HBox>
+
+            <!-- Buttons -->
+            <HBox spacing="12" alignment="CENTER_RIGHT" prefWidth="480">
+                <Button fx:id="cancelButton"
+                        text="Cancel"
+                        onAction="#onCancel"
+                        styleClass="cancel-button"/>
+                <Button fx:id="registerButton"
+                        text="🚀 Create Account"
+                        onAction="#onRegister"
+                        styleClass="primary-button"/>
+            </HBox>
+        </VBox>
+    </children>
+</StackPane>

@@ -1,0 +1,441 @@
+/* ==================== ULTRA PREMIUM STATISTICS STYLESHEET ==================== */
+
+/* General Styles with Premium Feel */
+* {
+    -fx-font-family: 'Segoe UI', 'SF Pro Display', 'Helvetica Neue', sans-serif;
+}
+
+.root {
+    -fx-background-color: #0F1419;
+}
+
+/* ==================== Top Bar with Glassmorphism ==================== */
+.top-bar {
+    -fx-background-color: linear-gradient(135deg, #1A1F26 0%, #232931 50%, #1E2732 100%);
+    -fx-border-color: linear-gradient(to right, #9C27B0, #2196F3);
+    -fx-border-width: 0 0 3 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 15, 0, 0, 5);
+    -fx-padding: 5 0;
+}
+
+.page-title {
+    -fx-text-fill: linear-gradient(to right, #9C27B0, #E91E63);
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(156, 39, 176, 0.8), 10, 0.5, 0, 3);
+}
+
+/* ==================== Premium Animated Buttons ==================== */
+.back-button {
+    -fx-background-color: linear-gradient(135deg, #32be8f 0%, #38d39f 100%);
+    -fx-text-fill: white;
+    -fx-font-weight: 900;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12;
+    -fx-padding: 12 28;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.6), 15, 0.3, 0, 5);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+}
+
+.back-button:hover {
+    -fx-background-color: linear-gradient(135deg, #38d39f 0%, #40e9af 100%);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(50, 190, 143, 0.9), 20, 0.5, 0, 8);
+}
+
+.back-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.refresh-button {
+    -fx-background-color: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    -fx-text-fill: white;
+    -fx-font-weight: 900;
+    -fx-font-size: 13px;
+    -fx-background-radius: 12;
+    -fx-padding: 12 28;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 15, 0.3, 0, 5);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+}
+
+.refresh-button:hover {
+    -fx-background-color: linear-gradient(135deg, #42A5F5 0%, #2196F3 100%);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.9), 20, 0.5, 0, 8);
+}
+
+.refresh-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* ==================== Ultra Premium Statistics Cards ==================== */
+.stat-card {
+    -fx-background-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 20, 0.3, 0, 8);
+    -fx-cursor: hand;
+    -fx-padding: 5;
+}
+
+.stat-card:hover {
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 30, 0.5, 0, 15);
+    -fx-rotate: 2;
+}
+
+.stat-card-books {
+    -fx-background-color: linear-gradient(135deg, #1E88E5 0%, #1565C0 50%, #0D47A1 100%);
+    -fx-border-color: linear-gradient(to bottom, #42A5F5, #1976D2);
+}
+
+.stat-card-books:hover {
+    -fx-background-color: linear-gradient(135deg, #2196F3 0%, #1E88E5 50%, #1565C0 100%);
+}
+
+.stat-card-members {
+    -fx-background-color: linear-gradient(135deg, #43A047 0%, #2E7D32 50%, #1B5E20 100%);
+    -fx-border-color: linear-gradient(to bottom, #66BB6A, #388E3C);
+}
+
+.stat-card-members:hover {
+    -fx-background-color: linear-gradient(135deg, #4CAF50 0%, #43A047 50%, #2E7D32 100%);
+}
+
+.stat-card-loans {
+    -fx-background-color: linear-gradient(135deg, #FB8C00 0%, #EF6C00 50%, #E65100 100%);
+    -fx-border-color: linear-gradient(to bottom, #FFA726, #F57C00);
+}
+
+.stat-card-loans:hover {
+    -fx-background-color: linear-gradient(135deg, #FF9800 0%, #FB8C00 50%, #EF6C00 100%);
+}
+
+.stat-card-admins {
+    -fx-background-color: linear-gradient(135deg, #F9A825 0%, #F57F17 50%, #FF6F00 100%);
+    -fx-border-color: linear-gradient(to bottom, #FFD54F, #FBC02D);
+}
+
+.stat-card-admins:hover {
+    -fx-background-color: linear-gradient(135deg, #FDD835 0%, #F9A825 50%, #F57F17 100%);
+}
+
+.stat-card-late {
+    -fx-background-color: linear-gradient(135deg, #E53935 0%, #C62828 50%, #B71C1C 100%);
+    -fx-border-color: linear-gradient(to bottom, #EF5350, #D32F2F);
+}
+
+.stat-card-late:hover {
+    -fx-background-color: linear-gradient(135deg, #F44336 0%, #E53935 50%, #C62828 100%);
+}
+
+.stat-label {
+    -fx-text-fill: rgba(255, 255, 255, 0.95);
+    -fx-font-size: 15px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 3, 0, 0, 2);
+}
+
+.stat-value {
+    -fx-text-fill: white;
+    -fx-font-size: 40px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 8, 0.3, 0, 4);
+}
+
+/* ==================== Ultra Premium Chart Cards ==================== */
+.chart-card {
+    -fx-background-color: linear-gradient(135deg, #1E2732 0%, #1A1F26 100%);
+    -fx-background-radius: 20;
+    -fx-border-color: linear-gradient(135deg, #2196F3, #9C27B0);
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0.4, 0, 8);
+}
+
+.chart-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.4), 30, 0.6, 0, 12);
+}
+
+/* ==================== Bar Chart Premium Styling ==================== */
+.bar-chart {
+    -fx-background-color: transparent;
+}
+
+.bar-chart .chart-title {
+    -fx-text-fill: linear-gradient(to right, #2196F3, #9C27B0);
+    -fx-font-size: 20px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 5, 0, 0, 2);
+}
+
+.bar-chart .chart-plot-background {
+    -fx-background-color: #1A1F26;
+    -fx-background-radius: 10;
+}
+
+.bar-chart .chart-vertical-grid-lines,
+.bar-chart .chart-horizontal-grid-lines {
+    -fx-stroke: rgba(55, 71, 79, 0.5);
+    -fx-stroke-width: 1;
+    -fx-stroke-dash-array: 8 8;
+}
+
+.bar-chart .chart-alternative-row-fill {
+    -fx-fill: rgba(38, 50, 56, 0.3);
+}
+
+.chart-axis {
+    -fx-tick-label-fill: #B0BEC5;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+.chart-axis .axis-label {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 900;
+}
+
+.chart-axis .axis-tick-mark {
+    -fx-stroke: #546E7A;
+    -fx-stroke-width: 2;
+}
+
+/* Premium Bar Colors with Gradients */
+.default-color0.chart-bar { 
+    -fx-bar-fill: linear-gradient(to top, #1565C0 0%, #2196F3 50%, #42A5F5 100%);
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 10, 0.5, 0, 5);
+}
+
+.default-color1.chart-bar { 
+    -fx-bar-fill: linear-gradient(to top, #2E7D32 0%, #4CAF50 50%, #66BB6A 100%);
+    -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.6), 10, 0.5, 0, 5);
+}
+
+.default-color2.chart-bar { 
+    -fx-bar-fill: linear-gradient(to top, #EF6C00 0%, #FF9800 50%, #FFB74D 100%);
+    -fx-effect: dropshadow(gaussian, rgba(255, 152, 0, 0.6), 10, 0.5, 0, 5);
+}
+
+.default-color3.chart-bar { 
+    -fx-bar-fill: linear-gradient(to top, #7B1FA2 0%, #9C27B0 50%, #BA68C8 100%);
+    -fx-effect: dropshadow(gaussian, rgba(156, 39, 176, 0.6), 10, 0.5, 0, 5);
+}
+
+.default-color4.chart-bar { 
+    -fx-bar-fill: linear-gradient(to top, #C62828 0%, #F44336 50%, #EF9A9A 100%);
+    -fx-effect: dropshadow(gaussian, rgba(244, 67, 54, 0.6), 10, 0.5, 0, 5);
+}
+
+/* ==================== Pie Chart Premium Styling ==================== */
+.pie-chart {
+    -fx-background-color: transparent;
+}
+
+.pie-chart .chart-title {
+    -fx-text-fill: linear-gradient(to right, #9C27B0, #E91E63);
+    -fx-font-size: 20px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(156, 39, 176, 0.5), 5, 0, 0, 2);
+}
+
+.pie-chart .chart-legend {
+    -fx-background-color: rgba(30, 39, 50, 0.9);
+    -fx-border-color: rgba(156, 39, 176, 0.3);
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 3);
+}
+
+.pie-chart .chart-legend-item-symbol {
+    -fx-padding: 10;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 0, 2);
+}
+
+.pie-chart .chart-legend-item .label {
+    -fx-text-fill: #ECEFF1;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.pie-chart .chart-pie-label {
+    -fx-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 3, 0, 0, 2);
+}
+
+.pie-chart .chart-pie-label-line {
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+}
+
+/* Premium Pie Slice Colors */
+.data0.chart-pie {
+    -fx-pie-color: linear-gradient(to bottom right, #2196F3, #1565C0);
+    -fx-border-color: #42A5F5;
+    -fx-border-width: 2;
+}
+
+.data1.chart-pie {
+    -fx-pie-color: linear-gradient(to bottom right, #4CAF50, #2E7D32);
+    -fx-border-color: #66BB6A;
+    -fx-border-width: 2;
+}
+
+.data2.chart-pie {
+    -fx-pie-color: linear-gradient(to bottom right, #FF9800, #EF6C00);
+    -fx-border-color: #FFB74D;
+    -fx-border-width: 2;
+}
+
+.data3.chart-pie {
+    -fx-pie-color: linear-gradient(to bottom right, #9C27B0, #7B1FA2);
+    -fx-border-color: #BA68C8;
+    -fx-border-width: 2;
+}
+
+.data4.chart-pie {
+    -fx-pie-color: linear-gradient(to bottom right, #F44336, #C62828);
+    -fx-border-color: #EF9A9A;
+    -fx-border-width: 2;
+}
+
+/* ==================== Line Chart Premium Styling ==================== */
+.line-chart {
+    -fx-background-color: transparent;
+}
+
+.line-chart .chart-title {
+    -fx-text-fill: linear-gradient(to right, #00BCD4, #009688);
+    -fx-font-size: 20px;
+    -fx-font-weight: 900;
+}
+
+.line-chart .chart-series-line {
+    -fx-stroke: linear-gradient(to right, #2196F3, #9C27B0);
+    -fx-stroke-width: 3;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 8, 0, 0, 3);
+}
+
+.line-chart .chart-line-symbol {
+    -fx-background-color: #2196F3, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.8), 10, 0.5, 0, 4);
+}
+
+.line-chart .chart-plot-background {
+    -fx-background-color: #1A1F26;
+}
+
+/* ==================== Status Bar Premium ==================== */
+.status-bar {
+    -fx-background-color: linear-gradient(to right, #1A1F26, #1E2732);
+    -fx-border-color: linear-gradient(to right, #2196F3, #9C27B0);
+    -fx-border-width: 2 0 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, -3);
+}
+
+/* ==================== Scrollbars Premium ==================== */
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #1A1F26;
+    -fx-border-color: #263238;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: linear-gradient(to bottom, #2196F3, #1976D2);
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 5, 0, 0, 2);
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #42A5F5, #2196F3);
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: linear-gradient(to bottom, #1976D2, #1565C0);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #1E2732;
+    -fx-background-radius: 8;
+}
+
+.scroll-bar .increment-button:hover,
+.scroll-bar .decrement-button:hover {
+    -fx-background-color: #263238;
+}
+
+/* ==================== Separator Premium ==================== */
+.separator {
+    -fx-background-color: linear-gradient(to right, transparent, #2196F3, transparent);
+    -fx-padding: 1;
+}
+
+/* ==================== Premium Animations ==================== */
+@keyframes pulseGlow {
+    0%, 100% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.6), 15, 0.3, 0, 5);
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 1.0), 25, 0.8, 0, 10);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        -fx-opacity: 0.8;
+    }
+    50% {
+        -fx-opacity: 1.0;
+    }
+    100% {
+        -fx-opacity: 0.8;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        -fx-translate-x: -50px;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-translate-x: 0;
+        -fx-opacity: 1;
+    }
+}
+
+/* ==================== Tooltip Premium ==================== */
+.tooltip {
+    -fx-background-color: linear-gradient(135deg, #1E2732, #232931);
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-padding: 10 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 15, 0.5, 0, 5);
+}

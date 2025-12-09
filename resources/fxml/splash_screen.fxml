@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.Image?>
+
+<StackPane fx:id="splashRoot"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.SplashScreenController"
+           stylesheets="@../css/splash.css"
+           prefWidth="800" prefHeight="600"
+           styleClass="splash-root">
+
+    <!-- Cercles de choc animés (Shockwaves) -->
+    <Circle fx:id="glowCircle1" radius="280" styleClass="glow-circle glow-1"/>
+    <Circle fx:id="glowCircle2" radius="320" styleClass="glow-circle glow-2"/>
+    <Circle fx:id="glowCircle3" radius="360" styleClass="glow-circle glow-3"/>
+
+    <!-- Container principal centré -->
+    <VBox fx:id="splashContainer" alignment="CENTER">
+        
+        <!-- Logo au centre (style Riot) -->
+        <StackPane fx:id="logoContainer" styleClass="logo-container">
+            <!-- Cercle de glow derrière le logo -->
+            <Circle fx:id="logoCircle" radius="220" styleClass="logo-circle"/>
+            
+            <!-- Logo principal -->
+            <ImageView fx:id="logoImage" 
+                       fitWidth="500" 
+                       fitHeight="500" 
+                       preserveRatio="true">
+                <image>
+                    <Image url="@../images/logo.png"/>
+                </image>
+            </ImageView>
+        </StackPane>
+        
+    </VBox>
+
+</StackPane>
