@@ -1,4 +1,5 @@
 # 📚 Gharbi's Library - Library Management System
+<img width="567" height="438" alt="Capture d&#39;écran 2025-12-09 011849" src="https://github.com/user-attachments/assets/88b11a1c-e418-4b9a-81e6-d6202a18b8f9" />
 
 A comprehensive Java-based library management system with a modern, intuitive interface for managing books, members, and lending operations.
 
