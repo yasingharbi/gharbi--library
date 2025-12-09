@@ -1,5 +1,21 @@
 # 📚 Gharbi's Library - Library Management System
+<img width="1358" height="1005" alt="login" src="https://github.com/user-attachments/assets/f422a7f0-5294-4156-b622-23db4bc2257e" />
 
+<img width="1919" height="1077" alt="Capture d&#39;écran 2025-12-08 192616" src="https://github.com/user-attachments/assets/538785a3-2799-45e9-96a8-034b7b7320bf" />
+<img width="1919" height="1077" alt="Capture d&#39;écran 2025-12-08 192622" src="https://github.com/user-attachments/assets/910f575d-817d-4235-a599-8e172d5bf363" />
+<img width="1531" height="844" alt="Capture d&#39;écran 2025-12-08 192655" src="https://github.com/user-attachments/assets/c651254c-7bf0-48a7-a3d8-2a07b34a88b6" />
+<img width="1526" height="960" alt="Capture d&#39;écran 2025-12-08 192710" src="https://github.com/user-attachments/assets/594c0b75-158f-4711-9b2c-305a<img width="465" height="669" alt="forgotpassword" src="https://github.com/user-attachments/assets/8e89d26e-7b76-46e9-87a7-0cbbfd9e9fcd" />
+19680c9f" />
+<img <img width="526" height="889" alt="registration" src="https://github.com/user-attachments/assets/a0dd37c3-4665-409c-ba78-00f10f573c49" />
+width="1560" height="884" alt="Capture d&#39;écran 2025-12-08 192717" src="https://github.com/user-attachments/assets/2e4dc83a-70cc-4d7e-8b0d-e406eef2d0e5" />
+<img width="1560" height="850" alt="Capture d&#39;écran 2025-12-08 192737" src="https://github.com/user-attachments/assets/645c3a02-75ae-4d54-818c-316dc2e8f7c0" />
+<img width="1546" height="966" alt="Capture d&#39;écran 2025-12-08 192744" src="https://github.com/user-attachments/assets/e98811a7-5caa-4ed6-a270-34821d8db850" />
+<img width="1751" height="1078" alt="Capture d&#39;écran 2025-12-08 192815" src="https://github.com/user-attachments/assets/a8bf30a6-9c3e-4f0c-a745-29d3faa82dcb" />
+<img width="1919" height="1074" alt="Capture d&#39;écran 2025-12-08 192609" src="https://github.com/user-attachments/assets/91a442d6-4e3c-41ec-9440-16fb9d528186" />
+<img width="1528" height="840" alt="Capture d&#39;écran 2025-12-08 192645" src="https://github.com/user-attachments/assets/12e6c294-b7d3-4bc3-8a29-78844e4f63ca" />
+<img width="1559" height="871" alt="Capture d&#39;écran 2025-12-08 192723" src="https://github.com/user-attachments/assets/82b313e9-83c7-4ff7-a961-7eeb2505c519" />
+<img width="1550" height="978" alt="Capture d&#39;écran 2025-12-08 192730" src="https://github.com/user-attachments/assets/7d6ffa94-8073-48a0-909a-8efc5a745289" />
+<img width="752" height="919" alt="Capture d&#39;écran 2025-12-08 192631" src="https://github.com/user-attachments/assets/0e7fd10e-2f96-44c6-9bf3-6e40f7e8527c" />
 
 A comprehensive Java-based library management system with a modern, intuitive interface for managing books, members, and lending operations.
 
